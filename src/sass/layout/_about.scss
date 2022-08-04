@@ -1,32 +1,52 @@
 .about {
   max-width: 480px;
+  height: 100%;
+
+  text-align: center;
 
   margin: 0 auto;
 
-  background-color: #fff5f6;
-}
+  background-color: $background-about;
 
-.about__label {
-  font-family: 'Titan One';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 1.17px;
-  text-align: center;
-  text-transform: uppercase;
+  &__container {
+    padding-top: 60px;
+  }
 
-  color: #ffa5ba;
-}
+  //   &__div--title {
+  //     display: block;
+  //     bottom: 0;
+  //     width: 200px;
+  //     height: 112px;
+  //     margin-top: 60px;
+  //   }
 
-.about__title {
-  font-family: 'Titan One';
-  font-style: normal;
-  font-weight: 400;
-  font-size: 34px;
-  line-height: 1.15;
-  text-align: center;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
+  &__label {
+    margin: 0;
 
-  color: #d41443;
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.17px;
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #ffa5ba;
+  }
+
+  &__title {
+    display: block;
+    margin: 0;
+
+    font-family: 'Titan One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 1.15;
+    text-align: center;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+
+    color: #d41443;
+  }
 }
