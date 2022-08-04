@@ -1,0 +1,40 @@
+.icon {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+/* ==========================================
+Single-colored icons can be modified like so:
+.name {
+  font-size: 32px;
+  color: red;
+}
+========================================== */
+
+.skobki {
+  width: 1.349609375em;
+}
+
+.vedro {
+  width: 0.66015625em;
+}
+
+.facebook {
+  width: 1.03125em;
+}
+
+.heart {
+  width: 0.884765625em;
+}
+
+.home {
+  width: 1.0830078125em;
+}
+
+.telegram {
+  width: 1.03125em;
+}
