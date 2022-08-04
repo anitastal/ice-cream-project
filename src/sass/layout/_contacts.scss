@@ -1,0 +1,6 @@
+.hidden {
+  @extend %vissually-hidden;
+}
+.section {
+  @extend %container;
+}
