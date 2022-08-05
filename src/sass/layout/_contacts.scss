@@ -1,9 +1,9 @@
 .hidden {
   @extend %vissually-hidden;
 }
-// .contacts {
-//   text-align: center;
-// }
+.contacts {
+  background-image: linear-gradient(to bottom, $header-color 15%, #fff5f6 85%);
+}
 .contacts__wrap {
   display: flex;
   flex-wrap: wrap;
@@ -137,6 +137,10 @@
   justify-content: center;
   margin-top: 32px;
   gap: 10px;
+
+  @include tablet {
+    gap: 12px;
+  }
 }
 .button {
   position: relative;
@@ -144,9 +148,8 @@
   padding-top: 16px;
   padding-bottom: 16px;
   padding-left: 17px;
-  padding-right: 55px;
-  // padding: 17px 16px;
-  margin-left: 14px;
+  padding-right: 40px;
+
   min-width: 73px;
   border: 1px solid red;
 
@@ -173,6 +176,6 @@
 }
 .more {
   position: absolute;
-  transform: translateY(8%);
+  transform: translate(120%, 8%);
   @include font(16px, 700, 21px, 0.04em);
 }
