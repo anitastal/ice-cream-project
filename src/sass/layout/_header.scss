@@ -59,6 +59,10 @@
     }
 }
 
+.header-button__menu--close {
+    display: none;
+}
+
 .header-button.is-open {
     .header-button__menu {
         width: 14px;
@@ -71,6 +75,23 @@
     }
 
     .header-button__menu--burger {
+        display: none;
+    }
+
+    .header-button__menu--close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 14px;
+        height: 14px;
+        display: block;
+
+        @include tablet {
+            right: 32px;
+        }
+    }
+
+    .header-button__menu--open {
         display: none;
     }
 }
@@ -163,6 +184,7 @@
         margin-left: 32px;
     }
 
+    
     @include comp {
         margin-left: auto;
     }
