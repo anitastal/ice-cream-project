@@ -33,21 +33,57 @@
   }
 }
 
+.product__catalog {
+  @include tablet {
+    gap: 16px;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  @include comp {
+    gap: 32px;
+  }
+}
+
 .product__item {
   position: relative;
   margin-bottom: 140px;
   height: 489px;
   border-radius: 24px;
 
+  @include tablet {
+    width: 224px;
+    height: 473px;
+  }
+
+  @include comp {
+    width: 368px;
+    height: 535px;
+  }
+
   &::before {
     content: '';
     position: absolute;
-    width: 100%;
+    width: 280px;
     height: 280px;
     top: 0;
     left: 0;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     transform: translateY(-50%);
+
+    @include tablet {
+      width: 224px;
+      height: 224px;
+    }
+
+    @include comp {
+      width: 368px;
+      height: 394px;
+    }
   }
 
   &:first-child {
@@ -55,6 +91,23 @@
     &::before {
       content: '';
       background-image: url(../img/ice-cream-tel.png);
+      // @include retina {
+      //   background-image: url(../img/ice-cream-tel@2x.png);
+      // }
+
+      @include tablet {
+        background-image: url(../img/ice-cream-tablet.png);
+
+        // @include retina {
+        //   background-image: url(../img/ice-cream-tablet@2x.png);
+        // }
+      }
+      @include comp {
+        background-image: url(../img/ice-cream-comp.png);
+        // @include retina {
+        //   background-image: url(../img/ice-cream-comp@2x.png);
+        // }
+      }
     }
   }
 
@@ -63,6 +116,22 @@
     &::before {
       content: '';
       background-image: url(../img/ice-coffee-tel.png);
+      // @include retina {
+      //   background-image: url(../img/ice-coffee-tel@2x.png);
+      // }
+      @include tablet {
+        background-image: url(../img/ice-coffee-tablet.png);
+
+        // @include retina {
+        //   background-image: url(../img/ice-coffee-tablet@2x.png);
+        // }
+      }
+      @include comp {
+        background-image: url(../img/ice-coffee-comp.png);
+        // @include retina {
+        //   background-image: url(../img/ice-coffee-comp@2x.png);
+        // }
+      }
     }
   }
 
@@ -72,6 +141,22 @@
     &::before {
       content: '';
       background-image: url(../img/milk-shake-tel.png);
+      // @include retina {
+      //   background-image: url(../img/milk-shake-tel@2x.png);
+      // }
+      @include tablet {
+        background-image: url(../img/milk-shake-tablet.png);
+
+        // @include retina {
+        //   background-image: url(../img/milk-shake-tablet@2x.png);
+        // }
+      }
+      @include comp {
+        background-image: url(../img/milk-shake-comp.png);
+        // @include retina {
+        //   background-image: url(../img/milk-shake-comp@2x.png);
+        // }
+      }
     }
   }
 }
@@ -113,6 +198,19 @@
   color: $header-color;
 
   margin-bottom: 32px;
+
+  @include tablet {
+    width: 160px;
+  }
+
+  @include comp {
+    width: 245px;
+    height: 106px;
+    margin-bottom: 60px;
+
+    font-size: 16px;
+    line-height: 1.76;
+  }
 }
 
 .product__button {
