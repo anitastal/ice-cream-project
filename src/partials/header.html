@@ -1,5 +1,5 @@
 <header class="header">
-  <div class="conteiner">
+  <div class="container">
     <div class="header-flex">
       <picture>
         <source
@@ -16,9 +16,18 @@
         />
         <img src="./img/logo-tel.png" alt="Site logo" class="header__logo" />
       </picture>
-      <svg class="header-flex__menu" width="20px" height="12px">
-        <use href="./img/icons.svg#burger"></use>
-      </svg>
+      <button class="header-button" data-menu-button>
+        <svg class="header-button__menu" width="20px" height="12px">
+          <use
+            class="header-button__menu header-button__menu--burger"
+            href="./img/icons.svg#burger"
+          ></use>
+          <use
+            class="header-button__menu header-button__menu--cross"
+            href="./img/icons.svg#close"
+          ></use>
+        </svg>
+      </button>
     </div>
     <nav class="header-nav">
       <button class="header-nav__button">Buy now</button>

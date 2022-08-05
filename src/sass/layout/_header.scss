@@ -13,3 +13,20 @@
     justify-content: space-between;
     padding-top: 8px;
 }
+
+.header-button {
+    padding: 0;
+    background-color: transparent;
+    border: none;
+
+    cursor: pointer;
+
+    & .header-button__menu--cross {
+        display: none;
+    }
+}
+
+.header-nav {
+    display: none;
+}
+
