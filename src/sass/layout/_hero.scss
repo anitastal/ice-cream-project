@@ -28,7 +28,8 @@
 
     @include tablet {
         margin-top: 10px;
-
+        
+        width: 162px;
         font-size: 22px;
         line-height: 1.13;
     }
@@ -37,6 +38,10 @@
 .hero__title--bolt {    
     font-size: 44px;
     color: $accent-color;
+
+    @include tablet {
+        font-size: 34px;
+    }
 }
 
 .hero__list {
@@ -107,6 +112,8 @@
     @include tablet {
         top: -39px;
         left: 248px;
+        width: 335px;
+        height: 333px;
     }
 }
 
@@ -142,4 +149,67 @@
         display: flex;
         justify-content: space-between;
     }
+}
+
+.hero-element__text {
+    position: relative;
+    color: #fff;
+    font-weight: 400;
+    font-size: 8px;
+    line-height: 1.25;
+    text-align: right;
+
+    &::after {
+        content:'';
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        z-index: -1;
+        transform: translateX(50%);
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        background-color: #fff;
+    }
+}
+
+.hero-element__text--item {
+    display: block;
+    font-family: 'Titan One', sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 1.14;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: $accent-color;
+}
+
+.hero-element__link {
+    margin-right: 10px;
+    margin-bottom: 16px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.hero-text {
+    display: none;
+
+    @include tablet {
+        display: block;
+        margin-top: 61px;
+        margin-left: 152px;
+            
+        width: 114px;
+        font-weight: 400;
+        font-size: 8px;
+        line-height: 1.5;
+        color: #fff;
+    }
+}
+
+.hero-button {
+    display: none;
 }
