@@ -9,7 +9,13 @@
     padding-top: 106px;
   }
 
+  &__title {
+    @extend %vissually-hidden;
+  }
+
   &__list {
+    @extend %list;
+
     display: flex;
     flex-wrap: wrap;
     gap: 98px;
@@ -53,20 +59,66 @@
       margin-bottom: 16px;
     }
 
-    &::before {
+    &--gear::before {
       content: '';
       position: absolute;
+      background-image: url(../img/vedro-tel.png);
+      background-repeat: no-repeat;
       top: -72px;
       left: 0;
-
       width: 50px;
       height: 50px;
 
-      background-color: red;
-      border-radius: 50%;
+      @include tablet {
+        top: -96px;
+
+        background-image: url(../img/vedro-tablet.png);
+      }
+
+      @include comp {
+        background-image: url(../img/vedro-comp.png);
+      }
+    }
+
+    &--apple::before {
+      content: '';
+      position: absolute;
+      background-image: url(../img/vedroapple-tel.png);
+      background-repeat: no-repeat;
+      top: -72px;
+      left: 0;
+      width: 50px;
+      height: 50px;
 
       @include tablet {
         top: -96px;
+
+        background-image: url(../img/vedroapple-tablet.png);
+      }
+
+      @include comp {
+        background-image: url(../img/vedroapple-comp.png);
+      }
+    }
+
+    &--heart::before {
+      content: '';
+      position: absolute;
+      background-image: url(../img/heart-tel.png);
+      background-repeat: no-repeat;
+      top: -72px;
+      left: 0;
+      width: 50px;
+      height: 50px;
+
+      @include tablet {
+        top: -96px;
+
+        background-image: url(../img/heart-tablet.png);
+      }
+
+      @include comp {
+        background-image: url(../img/heart-comp.png);
       }
     }
   }
@@ -107,27 +159,4 @@
   @include comp {
     max-width: 100%;
   }
-}
-
-.list {
-  padding: 0;
-  margin: 0;
-
-  font-style: normal;
-  list-style-type: none;
-  text-decoration: none;
-}
-
-.visually-hidden {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  border: 0;
-  padding: 0;
-
-  white-space: nowrap;
-  clip-path: inset(100%);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
 }
