@@ -2,12 +2,14 @@ footer{
     background-color: $background-about;
 }
 .footer__title{
+    width: 234px;
     margin-bottom: 40px;
     font-family: 'Titan One';
-    @include font($fs: 18px, $fw: 400, $lh: 21px, $ls: 0.03em);
+    @include font($fs: 18px, $fw: 400, $lh: 21px, $ls: 0.0em);
     text-transform: uppercase;
     color: $background-circle;
 &--dark {
+        display: block;
         @include font($fs: 34px, $fw: 400, $lh: 39px, $ls: 0.04em);
         text-transform: uppercase;
         color: $accent-color;
@@ -15,25 +17,32 @@ footer{
 }
 .footer__soc{
     display: flex;
+    justify-content: end;
     gap: 28px;
+    margin-bottom: 40px;
 }
-.footer__soc-link{
-    width: 32px;
-}
+
 .footer__icon{
     width: 32px;
     height: 32px;
     fill: $background-circle;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.footer__icon:hover{
+.footer__soc-link:hover .footer__icon,
+.footer__soc-link:focus .footer__icon {
     fill: $accent-color;
 }
 .footer__tel{
-
+    @include font($fs: 12px, $fw: 700, $lh: 22px, $ls: 0.0em);
+    text-align: right;
+    color: $second-text-color;
+    &--link{
+        color: $accent-color;
+    }
 }
 .footer__copyright{
     padding: 16px 20px 3px 20px;
-    @include font($fs: 14px, $fw: 700, $lh: 21px, $ls: 0.03em);
+    @include font($fs: 14px, $fw: 700, $lh: 21px, $ls: 0.0em);
     text-align: center;
     color: $main-text-color;
     border-top: 1px solid $borders-card-color;

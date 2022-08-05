@@ -22,7 +22,7 @@
 .reviews__text{
     width: 170px;
     padding: 13px 8px 9px 15px;
-    @include font($fs: 12px, $fw: 500, $ls: 0.02em);
+    @include font($fs: 12px, $fw: 500, $ls: 0.0em);
     line-height: 2.58;
     text-align: center;
 }
@@ -41,5 +41,5 @@
     @include font($fs: 14px,
         $fw: 500,
         $lh: 26px,
-        $ls: 0.03em)
+        $ls: 0.0em)
 }
