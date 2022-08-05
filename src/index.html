@@ -23,9 +23,9 @@
     <include src="./partials/gallery.html"></include>
     <include src="./partials/products.html"></include>
     <include src="./partials/footer.html"></include>
-
-    // ======МОДАЛЬНОЕ ОКНО
     <script>
+      // ======МОДАЛЬНОЕ ОКНО
+
       (() => {
         const refs = {
           openModalBtn: document.querySelector('[data-modal-open]'),
@@ -41,14 +41,12 @@
           refs.modal.classList.toggle('is-hidden');
         }
       })();
-    </script>
 
-    // =========МЕНЮ
-    <script>
+      // =========МЕНЮ
       (() => {
         const menuBtnRef = document.querySelector('[data-menu-button]');
         const mobileMenuRef = document.querySelector('[data-menu]');
-        console.log(menuBtnRef, mobileMenuRef);
+
         menuBtnRef.addEventListener('click', () => {
           const expanded =
             menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
