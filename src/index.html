@@ -44,6 +44,7 @@
       (() => {
         const menuBtnRef = document.querySelector('[data-menu-button]');
         const mobileMenuRef = document.querySelector('[data-menu]');
+        console.log(document.querySelector('.header-button'));
         menuBtnRef.addEventListener('click', () => {
           const expanded =
             menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
