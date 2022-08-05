@@ -139,9 +139,14 @@
   gap: 10px;
 }
 .button {
+  position: relative;
   border-radius: 22px;
-  padding: 17px 16px;
-  // padding-left: 17px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 17px;
+  padding-right: 55px;
+  // padding: 17px 16px;
+  margin-left: 14px;
   min-width: 73px;
   border: 1px solid red;
 
@@ -165,4 +170,9 @@
   height: 10px;
   margin-left: 11px;
   fill: $accent-color;
+}
+.more {
+  position: absolute;
+  transform: translateY(8%);
+  @include font(16px, 700, 21px, 0.04em);
 }
