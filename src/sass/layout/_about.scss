@@ -1,5 +1,5 @@
 .about {
-  max-width: 480px;
+  max-width: 479px;
 
   text-align: center;
 
@@ -11,6 +11,10 @@
   background-size: 100%;
 
   background-color: $background-about;
+
+  @include retina {
+    background-image: url(../img/milk-bg-tel@2x.png);
+  }
 
   @include mob {
     max-width: 767px;
@@ -29,6 +33,10 @@
     background-size: 100%;
 
     max-width: 100%;
+
+    @include retina {
+      background-image: url(../img/milk-bg-comp@2x.png);
+    }
   }
 
   &__container {
@@ -226,6 +234,8 @@
 .backdrop {
   position: fixed;
 
+  z-index: 1;
+
   top: 0;
   left: 0;
   width: 100%;
@@ -242,8 +252,6 @@
 
 .modal {
   position: absolute;
-
-  z-index: 11;
 
   left: 50%;
   top: 50%;

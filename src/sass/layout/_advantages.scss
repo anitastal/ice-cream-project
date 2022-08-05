@@ -5,6 +5,18 @@
 
   background-color: $background-about;
 
+  @include mob {
+    max-width: 767px;
+  }
+
+  @include tablet {
+    max-width: 1199px;
+  }
+
+  @include comp {
+    max-width: 100%;
+  }
+
   &__container {
     padding-top: 106px;
   }
@@ -34,8 +46,6 @@
 
   &__numbers {
     @include font(36px, 400, 41px, 0.04em);
-
-    z-index: 1;
 
     position: relative;
 
@@ -71,14 +81,18 @@
       width: 50px;
       height: 50px;
 
+      @include retina {
+        background-image: url(../img/vedro-tel@2x.png);
+      }
+
       @include tablet {
         top: -96px;
 
-        @include retina {
-          background-image: url(../img/vedro-tel@2x.png);
-        }
-
         background-image: url(../img/vedro-tablet.png);
+
+        @include retina {
+          background-image: url(../img/vedro-tablet@2x.png);
+        }
       }
 
       @include comp {
@@ -91,7 +105,6 @@
     }
 
     &--apple::before {
-      z-index: 1;
       content: '';
       position: absolute;
       background-image: url(../img/vedroapple-tel.png);
@@ -100,6 +113,10 @@
       left: 0;
       width: 50px;
       height: 50px;
+
+      @include retina {
+        background-image: url(../img/vedroapple-tel@2x.png);
+      }
 
       @include tablet {
         top: -96px;
@@ -129,6 +146,10 @@
       left: 0;
       width: 50px;
       height: 50px;
+
+      @include retina {
+        background-image: url(../img/heart-tel@2x.png);
+      }
 
       @include tablet {
         top: -96px;
@@ -173,17 +194,5 @@
       width: 288px;
       height: 52px;
     }
-  }
-
-  @include mob {
-    max-width: 767px;
-  }
-
-  @include tablet {
-    max-width: 1199px;
-  }
-
-  @include comp {
-    max-width: 100%;
   }
 }
