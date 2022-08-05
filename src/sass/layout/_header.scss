@@ -98,7 +98,7 @@
 
     @include comp {
         display: none;
-        position: fixed;
+        position: static;
     }
 }
 
