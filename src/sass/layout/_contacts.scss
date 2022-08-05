@@ -2,6 +2,7 @@
   @extend %vissually-hidden;
 }
 .contacts {
+  margin-top: 60px;
   background-image: linear-gradient(
     to bottom,
     $header-color 22%,
@@ -9,6 +10,7 @@
     #fff5f6 100%
   );
 }
+
 .contacts__wrap {
   display: flex;
   flex-wrap: wrap;
