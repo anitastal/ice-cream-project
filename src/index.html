@@ -25,7 +25,6 @@
     <include src="./partials/footer.html"></include>
     <script>
       // ======МОДАЛЬНОЕ ОКНО
-
       (() => {
         const refs = {
           openModalBtn: document.querySelector('[data-modal-open]'),
@@ -33,7 +32,6 @@
           modal: document.querySelector('[data-modal]'),
         };
         console.log(refs);
-
         refs.openModalBtn.addEventListener('click', toggleModal);
         refs.closeModalBtn.addEventListener('click', toggleModal);
 
@@ -46,7 +44,6 @@
       (() => {
         const menuBtnRef = document.querySelector('[data-menu-button]');
         const mobileMenuRef = document.querySelector('[data-menu]');
-
         menuBtnRef.addEventListener('click', () => {
           const expanded =
             menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
