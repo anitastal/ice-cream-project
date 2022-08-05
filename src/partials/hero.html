@@ -40,7 +40,7 @@
     </p>
     <button class="hero-button" type="button"></button>
     <span class="hero__circle"></span>
-    <picture class="hero__picture">
+    <picture class="hero__picture hero__picture--one">
       <source
         srcset="
           ./img/hero-icecream-tel.png    1x,
@@ -63,6 +63,17 @@
         media="(min-width: 1200px)"
       />
       <img src="./img/hero-icecream-tel.png" alt="Ice Cream" />
+    </picture>
+    <picture class="hero__picture hero__picture--two">
+      <source
+        srcset="./img/milk-tablet.png 1x, ./img/milk-tablet.png 2x"
+        media="(min-width: 768px)"
+      />
+      <source
+        srcset="./img/milk-comp.png 1x, ./img/milk-comp.png 2x"
+        media="(min-width: 1200px)"
+      />
+      <img src="./img/milk-tablet.png" alt="Milk" />
     </picture>
   </div>
 </section>
