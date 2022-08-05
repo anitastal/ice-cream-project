@@ -5,6 +5,97 @@
 
   background-color: $background-about;
 
+  &__container {
+    padding-top: 106px;
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 98px;
+
+    margin: 0;
+
+    @include tablet {
+      display: flex;
+      gap: 120px;
+    }
+
+    @include comp {
+      gap: 153px;
+    }
+  }
+
+  &__numbers {
+    @include font(36px, 400, 41px, 0.04em);
+
+    position: relative;
+
+    height: 56px;
+
+    font-family: 'Titan One';
+    text-transform: uppercase;
+    color: $accent-color;
+
+    margin: 0;
+
+    @include tablet {
+      @include font(48px, 400, 55px, 0.04em);
+
+      margin-bottom: 13px;
+    }
+
+    @include comp {
+      @include font(58px, 400, 66px, 0.04em);
+
+      height: 65px;
+
+      margin-bottom: 16px;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -72px;
+      left: 0;
+
+      width: 50px;
+      height: 50px;
+
+      background-color: red;
+      border-radius: 50%;
+
+      @include tablet {
+        top: -96px;
+      }
+    }
+  }
+
+  &__text {
+    @include font(12px, 700, 20px, 0em);
+
+    width: 230px;
+    height: 36px;
+
+    color: $second-text-color;
+
+    margin: 0;
+
+    @include tablet {
+      @include font(14px, 700, 24px, 0em);
+
+      width: 166px;
+      height: 67px;
+    }
+
+    @include comp {
+      @include font(16px, 700, 28px, 0.02em);
+
+      width: 288px;
+      height: 52px;
+    }
+  }
+
   @include mob {
     max-width: 767px;
   }
@@ -17,16 +108,7 @@
     max-width: 100%;
   }
 }
-.conteiner {
-}
-.advantages__container {
-  padding-top: 106px;
-}
-.advantages__title {
-  //   @extend %visualy-hidden;
-}
-.visualy-hidden {
-}
+
 .list {
   padding: 0;
   margin: 0;
@@ -34,91 +116,6 @@
   font-style: normal;
   list-style-type: none;
   text-decoration: none;
-}
-.advantages__list {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 98px;
-
-  margin: 0;
-
-  @include tablet {
-    display: flex;
-    gap: 120px;
-  }
-
-  @include comp {
-    gap: 153px;
-  }
-}
-.advantages__item {
-}
-.advantages__numbers {
-  @include font(36px, 400, 41px, 0.04em);
-
-  position: relative;
-
-  height: 56px;
-
-  font-family: 'Titan One';
-  text-transform: uppercase;
-  color: $accent-color;
-
-  margin: 0;
-
-  @include tablet {
-    @include font(48px, 400, 55px, 0.04em);
-
-    margin-bottom: 13px;
-  }
-
-  @include comp {
-    @include font(58px, 400, 66px, 0.04em);
-
-    height: 65px;
-
-    margin-bottom: 16px;
-  }
-
-  &::before {
-    content: '';
-    position: absolute;
-    top: -72px;
-    left: 0;
-
-    width: 50px;
-    height: 50px;
-
-    background-color: red;
-
-    @include tablet {
-      top: -96px;
-    }
-  }
-}
-.advantages__text {
-  @include font(12px, 700, 20px, 0em);
-
-  width: 230px;
-  height: 36px;
-
-  color: $second-text-color;
-
-  margin: 0;
-
-  @include tablet {
-    @include font(14px, 700, 24px, 0em);
-
-    width: 166px;
-    height: 67px;
-  }
-
-  @include comp {
-    @include font(16px, 700, 28px, 0.02em);
-
-    width: 288px;
-    height: 52px;
-  }
 }
 
 .visually-hidden {
