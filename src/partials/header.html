@@ -16,7 +16,12 @@
         />
         <img src="./img/logo-tel.png" alt="Site logo" class="header__logo" />
       </picture>
-      <button class="header-button" data-menu-button>
+      <button
+        class="header-button"
+        aria-label="Switch mobile menu"
+        aria-expanded="false"
+        data-menu-button
+      >
         <svg class="header-button__menu" width="20px" height="12px">
           <use
             class="header-button__menu header-button__menu--burger"
@@ -28,26 +33,26 @@
           ></use>
         </svg>
       </button>
+      <nav class="header-nav" data-menu>
+        <button class="header-nav__button">Buy now</button>
+        <ul class="header-nav__list">
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="#home">Home</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="#about-us">About us</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="#how-it's-made">How it’s made?</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="#our-products">Our products</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <nav class="header-nav">
-      <button class="header-nav__button">Buy now</button>
-      <ul class="header-nav__list">
-        <li class="header-nav__item">
-          <a class="header-nav__link" href="#home">Home</a>
-        </li>
-        <li class="header-nav__item">
-          <a class="header-nav__link" href="#about-us">About us</a>
-        </li>
-        <li class="header-nav__item">
-          <a class="header-nav__link" href="#how-it's-made">How it’s made?</a>
-        </li>
-        <li class="header-nav__item">
-          <a class="header-nav__link" href="#our-products">Our products</a>
-        </li>
-        <li class="header-nav__item">
-          <a class="header-nav__link" href="#contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
   </div>
 </header>
