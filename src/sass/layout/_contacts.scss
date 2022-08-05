@@ -1,38 +1,120 @@
 .hidden {
   @extend %vissually-hidden;
 }
+// .contacts__wrap:not(:last-child) {
+//   margin-bottom: 30px;
+// }
+.contacts__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  @include tablet {
+    gap: 32px;
+  }
+}
 .contacts__card {
   padding: 40px 32px;
-  height: 412px;
   width: 100%;
   background-color: $header-color;
-  border: 1px solid red;
+  border: 1px solid $borders-card-color;
   border-radius: 24px;
-  // border: 1px solid $borders-card-color;
+  box-shadow: 0px 8px 30px 0px rgba(212, 20, 67, 0.1);
+
+  @include tablet {
+    width: calc((100% - 64px) / 3);
+  }
 }
+
 .card__category {
+  @include font(12px, 500, 22px, 0.04em);
   text-transform: uppercase;
-  border: 1px solid green;
+  border: 1px solid transparent;
   border-radius: 4px;
   text-align: center;
   color: $main-text-color;
-  width: 80px;
-  padding-top: 5px;
-  padding-bottom: 5px;
   background-color: $background-card-one;
+}
+.card__category.second {
+  background-color: $background-card-three;
 }
 .card__title {
   @include font(12px, 500, 22px, 0.04em);
   margin-top: 20px;
   margin-bottom: 8px;
   text-align: left;
+
+  @include tablet {
+    @include font(14px, 500, 26px, 0.04em);
+  }
 }
 .card__text {
   @include font(12px, 500, 18px, 0.04em);
   color: $main-text-color;
   margin-bottom: 24px;
+  position: relative;
+  padding-bottom: 24px;
+
+  @include tablet {
+    @include font(14px, 500, 23px, 0.04em);
+  }
 }
 .card__text::after {
   content: '';
-  border: 4px solid red;
+  border: 1px solid $borders-card-color;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+.timetable__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  position: relative;
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+
+  @include tablet {
+    gap: 12px;
+  }
+}
+.timetable__day {
+  @include font(12px, 500, 22px, 0.04em);
+
+  @include tablet {
+    @include font(14px, 500, 26px, 0.04em);
+  }
+}
+
+.timetable__time {
+  @include font(12px, 500, 22px, 0.04em);
+  color: $background-circle;
+  @include tablet {
+    @include font(14px, 500, 26px, 0.04em);
+  }
+}
+.timetable::after {
+  content: '';
+  border: 1px solid $borders-card-color;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.contacts__tel {
+  @include font(12px, 500, 18px, 0.04em);
+  color: $main-text-color;
+
+  @include tablet {
+    @include font(14px, 500, 26px, 0.04em);
+  }
+}
+.contacts__mail {
+  @include font(12px, 500, 18px, 0.04em);
+  color: $main-text-color;
+
+  @include tablet {
+    @include font(14px, 500, 26px, 0.04em);
+  }
 }
