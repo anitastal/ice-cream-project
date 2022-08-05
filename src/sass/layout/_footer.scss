@@ -1,0 +1,24 @@
+footer{
+    background-color: $background-about;
+}
+.footer__title{
+    margin-bottom: 40px;
+    font-family: 'Titan One';
+    @include font($fs: 18px, $fw: 400, $lh: 21px, $ls: 0.03em);
+    text-transform: uppercase;
+    color: $background-circle;
+&--dark {
+        @include font($fs: 34px, $fw: 400, $lh: 39px, $ls: 0.04em);
+        text-transform: uppercase;
+        color: $accent-color;
+    }
+}
+.footer__soc{
+    display: flex;
+    gap: 28px;
+}
+.footer__soc-link{
+    width: 32px;
+}
+
+
