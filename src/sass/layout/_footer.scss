@@ -20,5 +20,22 @@ footer{
 .footer__soc-link{
     width: 32px;
 }
+.footer__icon{
+    width: 32px;
+    height: 32px;
+    fill: $background-circle;
+}
+.footer__icon:hover{
+    fill: $accent-color;
+}
+.footer__tel{
 
+}
+.footer__copyright{
+    padding: 16px 20px 3px 20px;
+    @include font($fs: 14px, $fw: 700, $lh: 21px, $ls: 0.03em);
+    text-align: center;
+    color: $main-text-color;
+    border-top: 1px solid $borders-card-color;
+}
 
