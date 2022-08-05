@@ -1,65 +1,112 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page title</title>
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="./index.js"></script>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page title</title>
-  <link rel="stylesheet" href="./sass/index.scss" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
-    rel="stylesheet">
-  <script type="module" src="./index.js"></script>
-</head>
+  <body>
+    <!-- ❗️❗️❗️ Add partials like so for every page -->
+    <include src="./partials/header.html"></include>
+    <include src="./partials/hero.html"></include>
+    <include src="./partials/about.html"></include>
+    <include src="./partials/advantages.html"></include>
+    <include src="./partials/contacts.html"></include>
+    <include src="./partials/customer-reviews.html"></include>
+    <include src="./partials/gallery.html"></include>
+    <include src="./partials/products.html"></include>
+    <include src="./partials/footer.html"></include>
 
-<body>
-  <!-- ❗️❗️❗️ Add partials like so for every page -->
-  <include src="./partials/header.html"></include>
-  <include src="./partials/hero.html"></include>
-  <include src="./partials/about.html"></include>
-  <include src="./partials/advantages.html"></include>
-  <include src="./partials/contacts.html"></include>
-  <include src="./partials/customer-reviews.html"></include>
-  <include src="./partials/gallery.html"></include>
-  <include src="./partials/products.html"></include>
-  <include src="./partials/footer.html"></include>
-  // ======МОДАЛЬНОЕ ОКНО
-  <script>
-    (() => {
-      const refs = {
-        openModalBtn: document.querySelector('[data-modal-open]'),
-        closeModalBtn: document.querySelector('[data-modal-close]'),
-        modal: document.querySelector('[data-modal]'),
-      };
-      console.log(refs);
+    <!-- <button
+      class="header-button"
+      aria-label="Switch mobile menu"
+      aria-expanded="false"
+      data-menu-button
+    >
+      <svg class="header-button__menu" width="20px" height="12px">
+        <use
+          class="header-button__menu header-button__menu--burger"
+          href="./img/icons.svg#burger"
+        ></use>
+        <use
+          class="header-button__menu header-button__menu--cross"
+          href="./img/icons.svg#close"
+        ></use>
+      </svg>
+    </button> -->
 
-      refs.openModalBtn.addEventListener('click', toggleModal);
-      refs.closeModalBtn.addEventListener('click', toggleModal);
+    <nav class="header-nav" data-menu>
+      <div class="header-nav__box header-nav__box--one">
+        <button class="header-nav__button">
+          Buy now
+          <svg class="header-nav__svg" width="8px" height="10px">
+            <use href="./img/icons.svg#more"></use>
+          </svg>
+        </button>
+      </div>
+      <div class="header-nav__box header-nav__box--two">
+        <ul class="header-nav__list">
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="#home">Home</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="#about-us">About us</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="#how-it's-made">How it’s made?</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="#our-products">Our products</a>
+          </li>
+          <li class="header-nav__item">
+            <a class="header-nav__link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
-      function toggleModal() {
-        refs.modal.classList.toggle('is-hidden');
-      }
-    })();
-  </script>
+    // ======МОДАЛЬНОЕ ОКНО
+    <script>
+      (() => {
+        const refs = {
+          openModalBtn: document.querySelector('[data-modal-open]'),
+          closeModalBtn: document.querySelector('[data-modal-close]'),
+          modal: document.querySelector('[data-modal]'),
+        };
+        console.log(refs);
 
-  // =========МЕНЮ
-  <script>
-    (() => {
-      const menuBtnRef = document.querySelector('[data-menu-button]');
-      const mobileMenuRef = document.querySelector('[data-menu]');
+        refs.openModalBtn.addEventListener('click', toggleModal);
+        refs.closeModalBtn.addEventListener('click', toggleModal);
 
-      menuBtnRef.addEventListener('click', () => {
-        const expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
+        function toggleModal() {
+          refs.modal.classList.toggle('is-hidden');
+        }
+      })();
+    </script>
 
-        menuBtnRef.classList.toggle('is-open');
-        menuBtnRef.setAttribute('aria-expanded', !expanded);
+    // =========МЕНЮ
+    <script>
+      (() => {
+        const menuBtnRef = document.querySelector('[data-menu-button]');
+        const mobileMenuRef = document.querySelector('[data-menu]');
+        console.log(menuBtnRef, mobileMenuRef);
+        menuBtnRef.addEventListener('click', () => {
+          const expanded =
+            menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
 
-        mobileMenuRef.classList.toggle('is-open');
-      });
-    })();
-  </script>
+          menuBtnRef.classList.toggle('is-open');
+          menuBtnRef.setAttribute('aria-expanded', !expanded);
 
-
-
-</body>
-
+          mobileMenuRef.classList.toggle('is-open');
+        });
+      })();
+    </script>
+  </body>
 </html>

@@ -1,7 +1,7 @@
 <header class="header">
   <div class="container">
     <div class="header-flex">
-      <picture>
+      <picture class="header-picture">
         <source
           srcset="./img/logo-tel.png 1x, ./img/logo-tel@2x.png 2x"
           media="(min-width: 320px)"
@@ -16,6 +16,7 @@
         />
         <img src="./img/logo-tel.png" alt="Site logo" class="header__logo" />
       </picture>
+
       <button
         class="header-button"
         aria-label="Switch mobile menu"
@@ -33,29 +34,74 @@
           ></use>
         </svg>
       </button>
-      <nav class="header-nav" data-menu>
-        <button class="header-nav__button">
-          Buy now
-          <svg><use href="./img/icons.svg#skobki"></use></svg>
-        </button>
-        <ul class="header-nav__list">
-          <li class="header-nav__item">
-            <a class="header-nav__link" href="#home">Home</a>
-          </li>
-          <li class="header-nav__item">
-            <a class="header-nav__link" href="#about-us">About us</a>
-          </li>
-          <li class="header-nav__item">
-            <a class="header-nav__link" href="#how-it's-made">How it’s made?</a>
-          </li>
-          <li class="header-nav__item">
-            <a class="header-nav__link" href="#our-products">Our products</a>
-          </li>
-          <li class="header-nav__item">
-            <a class="header-nav__link" href="#contact">Contact</a>
-          </li>
-        </ul>
+      <!-- <nav class="header-nav" data-menu>
+        <div class="header-nav__box header-nav__box--one">
+          <button class="header-nav__button">
+            Buy now
+            <svg class="header-nav__svg" width="8px" height="10px">
+              <use href="./img/icons.svg#more"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="header-nav__box header-nav__box--two">
+          <ul class="header-nav__list">
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#home">Home</a>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#about-us">About us</a>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#how-it's-made"
+                >How it’s made?</a
+              >
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#our-products">Our products</a>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav> -->
+      <nav class="header-secondary" data-menu>
+        <div class="header-nav__box header-nav__box--one">
+          <button class="header-nav__button">
+            Buy now
+            <svg class="header-nav__svg" width="8px" height="10px">
+              <use href="./img/icons.svg#more"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="header-nav__box header-nav__box--two">
+          <ul class="header-nav__list">
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#home">Home</a>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#about-us">About us</a>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#how-it's-made"
+                >How it’s made?</a
+              >
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#our-products">Our products</a>
+            </li>
+            <li class="header-nav__item">
+              <a class="header-nav__link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </nav>
+      <button class="header-nav__button header-nav__button--two">
+        Buy now
+        <svg class="header-nav__svg" width="8px" height="10px">
+          <use href="./img/icons.svg#more"></use>
+        </svg>
+      </button>
     </div>
   </div>
 </header>
