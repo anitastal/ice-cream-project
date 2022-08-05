@@ -1,10 +1,26 @@
 <section class="hero">
   <div class="container">
-    <h1 class="hero__title">
-      ice cream made with <br /><span class="hero__title hero__title--bolt"
-        >passion</span
-      >
-    </h1>
+    <div class="hero-flex">
+      <h1 class="hero__title">
+        ice cream made with <br /><span class="hero__title hero__title--bolt"
+          >passion</span
+        >
+      </h1>
+      <ul class="hero-element">
+        <li class="hero-element__link">
+          <p class="hero-element__text">
+            <span class="hero-element__text hero-element__text--item">16</span
+            >cafes
+          </p>
+        </li>
+        <li class="hero-element__link">
+          <p class="hero-element__text">
+            <span class="hero-element__text hero-element__text--item">23</span
+            >food trucks
+          </p>
+        </li>
+      </ul>
+    </div>
     <ul class="hero__list">
       <li class="hero__item">
         <button class="hero__button hero__button--primary">Products</button>
@@ -16,7 +32,7 @@
       </li>
     </ul>
     <span class="hero__circle"></span>
-    <!-- <picture>
+    <picture class="hero__picture">
       <source
         srcset="
           ./img/hero-icecream-tel.png    1x,
@@ -38,11 +54,7 @@
         "
         media="(min-width: 1200px)"
       />
-      <img
-        src="./img/hero-icecream-tel.png"
-        alt="Ice Cream"
-        class="header__logo"
-      />
-    </picture> -->
+      <img src="./img/hero-icecream-tel.png" alt="Ice Cream" />
+    </picture>
   </div>
 </section>
