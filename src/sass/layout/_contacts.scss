@@ -1,120 +1,196 @@
 .hidden {
   @extend %vissually-hidden;
 }
-// .contacts__wrap:not(:last-child) {
-//   margin-bottom: 30px;
-// }
-.contacts__wrap {
+
+.contacts {
+  margin-top: 60px;
+  background-image: linear-gradient(
+    to bottom,
+    $header-color 22%,
+    #fff5f6 15%,
+    #fff5f6 100%
+  );
+
+  &__card {
+    padding: 40px 32px;
+    width: 100%;
+    background-color: $header-color;
+
+    border-radius: 24px;
+    box-shadow: 0px 8px 30px 0px rgba(212, 20, 67, 0.1);
+
+    @include tablet {
+      width: calc((100% - 64px) / 3);
+    }
+  }
+  &__tel {
+    @include font(12px, 500, 18px, 0.04em);
+    color: $main-text-color;
+
+    @include tablet {
+      @include font(14px, 500, 26px, 0.04em);
+    }
+  }
+  &__mail {
+    @include font(12px, 500, 18px, 0.04em);
+    color: $main-text-color;
+
+    @include tablet {
+      @include font(14px, 500, 26px, 0.04em);
+    }
+  }
+  &__tel:hover,
+  &__tel:focus,
+  &__mail:hover,
+  &__mail:focus {
+    color: $accent-color;
+  }
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+  }
+}
+.card {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
   @include tablet {
     gap: 32px;
   }
-}
-.contacts__card {
-  padding: 40px 32px;
-  width: 100%;
-  background-color: $header-color;
-  border: 1px solid $borders-card-color;
-  border-radius: 24px;
-  box-shadow: 0px 8px 30px 0px rgba(212, 20, 67, 0.1);
 
-  @include tablet {
-    width: calc((100% - 64px) / 3);
+  &__category {
+    @include font(12px, 500, 22px, 0.04em);
+    display: inline-block;
+    text-transform: uppercase;
+
+    border-radius: 4px;
+    color: $header-color;
+    background-color: $background-card-two;
+
+    padding: 0 25px;
+
+    @include tablet {
+      @include font(16px, 500, 30px, 0.04em);
+    }
+  }
+  &__category.second {
+    background-color: $background-card-three;
+  }
+  &__title {
+    @include font(12px, 500, 22px, 0.04em);
+    margin-top: 20px;
+    margin-bottom: 8px;
+    text-align: left;
+
+    @include tablet {
+      @include font(14px, 500, 26px, 0.04em);
+    }
+  }
+  &__text {
+    @include font(12px, 500, 18px, 0.04em);
+    color: $main-text-color;
+    margin-bottom: 24px;
+    position: relative;
+    padding-bottom: 24px;
+
+    @include tablet {
+      @include font(14px, 500, 23px, 0.04em);
+    }
+  }
+  &__text::after {
+    content: '';
+    border: 1px solid $borders-card-color;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+  }
+}
+.timetable {
+  &__wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    position: relative;
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+
+    @include tablet {
+      gap: 12px;
+    }
+  }
+  &__day {
+    @include font(12px, 500, 22px, 0.04em);
+
+    @include tablet {
+      @include font(14px, 500, 26px, 0.04em);
+    }
+  }
+  &__time {
+    @include font(12px, 500, 22px, 0.04em);
+    color: $background-circle;
+    @include tablet {
+      @include font(14px, 500, 26px, 0.04em);
+    }
+  }
+  &::after {
+    content: '';
+    border: 1px solid $borders-card-color;
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
   }
 }
 
-.card__category {
-  @include font(12px, 500, 22px, 0.04em);
-  text-transform: uppercase;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  text-align: center;
-  color: $main-text-color;
-  background-color: $background-card-one;
-}
-.card__category.second {
-  background-color: $background-card-three;
-}
-.card__title {
-  @include font(12px, 500, 22px, 0.04em);
-  margin-top: 20px;
-  margin-bottom: 8px;
-  text-align: left;
-
-  @include tablet {
-    @include font(14px, 500, 26px, 0.04em);
-  }
-}
-.card__text {
-  @include font(12px, 500, 18px, 0.04em);
-  color: $main-text-color;
-  margin-bottom: 24px;
-  position: relative;
-  padding-bottom: 24px;
-
-  @include tablet {
-    @include font(14px, 500, 23px, 0.04em);
-  }
-}
-.card__text::after {
-  content: '';
-  border: 1px solid $borders-card-color;
-  bottom: 0;
-  left: 0;
-  position: absolute;
-  width: 100%;
-}
-.timetable__wrap {
+.button__wrap {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  position: relative;
-  padding-bottom: 24px;
-  margin-bottom: 24px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  gap: 10px;
 
   @include tablet {
     gap: 12px;
   }
 }
-.timetable__day {
-  @include font(12px, 500, 22px, 0.04em);
+.button {
+  position: relative;
+  border-radius: 22px;
+  padding: 10px 30px 10px 16px;
 
-  @include tablet {
-    @include font(14px, 500, 26px, 0.04em);
+  min-width: 162px;
+  border: 1px solid transparent;
+
+  @include font(16px, 700, 21px, 0.04em);
+  cursor: pointer;
+  text-align: center;
+
+  color: $accent-color;
+  background-color: $header-color;
+
+  &:hover,
+  &:focus {
+    color: $header-color;
+    background-color: $accent-color;
+  }
+  &:hover &__icon {
+    fill: $header-color;
+  }
+  &.current {
+    background-color: $accent-color;
+    color: $header-color;
+  }
+  &__icon {
+    width: 6px;
+    height: 10px;
+    margin-left: 11px;
+    fill: $accent-color;
   }
 }
-
-.timetable__time {
-  @include font(12px, 500, 22px, 0.04em);
-  color: $background-circle;
-  @include tablet {
-    @include font(14px, 500, 26px, 0.04em);
-  }
-}
-.timetable::after {
-  content: '';
-  border: 1px solid $borders-card-color;
-  bottom: 0;
-  left: 0;
+.more {
   position: absolute;
-  width: 100%;
-}
-
-.contacts__tel {
-  @include font(12px, 500, 18px, 0.04em);
-  color: $main-text-color;
-
-  @include tablet {
-    @include font(14px, 500, 26px, 0.04em);
-  }
-}
-.contacts__mail {
-  @include font(12px, 500, 18px, 0.04em);
-  color: $main-text-color;
-
-  @include tablet {
-    @include font(14px, 500, 26px, 0.04em);
-  }
+  transform: translate(120%, 8%);
+  @include font(16px, 700, 21px, 0.04em);
 }
