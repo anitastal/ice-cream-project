@@ -1,9 +1,9 @@
 .hidden {
   @extend %vissually-hidden;
 }
-// .contacts__wrap:not(:last-child) {
-//   margin-bottom: 30px;
-// }
+.contacts {
+  background-image: linear-gradient(to bottom, $header-color 15%, #fff5f6 85%);
+}
 .contacts__wrap {
   display: flex;
   flex-wrap: wrap;
@@ -27,13 +27,19 @@
 
 .card__category {
   @include font(12px, 500, 22px, 0.04em);
+  display: inline-block;
   text-transform: uppercase;
   border: 1px solid transparent;
   border-radius: 4px;
-  text-align: center;
   color: $main-text-color;
   background-color: $background-card-one;
+  padding: 4px 25px;
+
+  @include tablet {
+    @include font(16px, 500, 30px, 0.04em);
+  }
 }
+
 .card__category.second {
   background-color: $background-card-three;
 }
@@ -117,4 +123,59 @@
   @include tablet {
     @include font(14px, 500, 26px, 0.04em);
   }
+}
+.contacts__tel:hover,
+.contacts__tel:focus,
+.contacts__mail:hover,
+.contacts__mail:focus {
+  color: $accent-color;
+}
+.button__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-top: 32px;
+  gap: 10px;
+
+  @include tablet {
+    gap: 12px;
+  }
+}
+.button {
+  position: relative;
+  border-radius: 22px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  padding-left: 17px;
+  padding-right: 40px;
+
+  min-width: 73px;
+  border: 1px solid red;
+
+  @include font(16px, 700, 21px, 0.04em);
+  cursor: pointer;
+  text-align: center;
+
+  color: $accent-color;
+  background-color: $header-color;
+}
+.button:hover,
+.button:focus {
+  color: $header-color;
+  background-color: $accent-color;
+}
+.button:hover .button__icon {
+  fill: $header-color;
+}
+.button__icon {
+  width: 6px;
+  height: 10px;
+  margin-left: 11px;
+  fill: $accent-color;
+}
+.more {
+  position: absolute;
+  transform: translate(120%, 8%);
+  @include font(16px, 700, 21px, 0.04em);
 }
