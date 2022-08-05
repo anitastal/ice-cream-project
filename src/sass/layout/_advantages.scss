@@ -1,0 +1,198 @@
+.advantages {
+  max-width: 480px;
+
+  margin: 0 auto;
+
+  background-color: $background-about;
+
+  @include mob {
+    max-width: 767px;
+  }
+
+  @include tablet {
+    max-width: 1199px;
+  }
+
+  @include comp {
+    max-width: 100%;
+  }
+
+  &__container {
+    padding-top: 106px;
+  }
+
+  &__title {
+    @extend %vissually-hidden;
+  }
+
+  &__list {
+    @extend %list;
+
+    display: flex;
+    flex-wrap: wrap;
+    gap: 98px;
+
+    margin: 0;
+
+    @include tablet {
+      display: flex;
+      gap: 120px;
+    }
+
+    @include comp {
+      gap: 153px;
+    }
+  }
+
+  &__numbers {
+    @include font(36px, 400, 41px, 0.04em);
+
+    position: relative;
+
+    height: 56px;
+
+    font-family: 'Titan One';
+    text-transform: uppercase;
+    color: $accent-color;
+
+    margin: 0;
+
+    @include tablet {
+      @include font(48px, 400, 55px, 0.04em);
+
+      margin-bottom: 13px;
+    }
+
+    @include comp {
+      @include font(58px, 400, 66px, 0.04em);
+
+      height: 65px;
+
+      margin-bottom: 16px;
+    }
+
+    &--gear::before {
+      content: '';
+      position: absolute;
+      background-image: url(../img/vedro-tel.png);
+      background-repeat: no-repeat;
+      top: -72px;
+      left: 0;
+      width: 50px;
+      height: 50px;
+
+      @include retina {
+        background-image: url(../img/vedro-tel@2x.png);
+      }
+
+      @include tablet {
+        top: -96px;
+
+        background-image: url(../img/vedro-tablet.png);
+
+        @include retina {
+          background-image: url(../img/vedro-tablet@2x.png);
+        }
+      }
+
+      @include comp {
+        background-image: url(../img/vedro-comp.png);
+
+        @include retina {
+          background-image: url(../img/vedro-comp@2x.png);
+        }
+      }
+    }
+
+    &--apple::before {
+      content: '';
+      position: absolute;
+      background-image: url(../img/vedroapple-tel.png);
+      background-repeat: no-repeat;
+      top: -72px;
+      left: 0;
+      width: 50px;
+      height: 50px;
+
+      @include retina {
+        background-image: url(../img/vedroapple-tel@2x.png);
+      }
+
+      @include tablet {
+        top: -96px;
+
+        background-image: url(../img/vedroapple-tablet.png);
+
+        @include retina {
+          background-image: url(../img/vedroapple-tablet@2x.png);
+        }
+      }
+
+      @include comp {
+        background-image: url(../img/vedroapple-comp.png);
+
+        @include retina {
+          background-image: url(../img/vedroapple-comp@2x.png);
+        }
+      }
+    }
+
+    &--heart::before {
+      content: '';
+      position: absolute;
+      background-image: url(../img/heart-tel.png);
+      background-repeat: no-repeat;
+      top: -72px;
+      left: 0;
+      width: 50px;
+      height: 50px;
+
+      @include retina {
+        background-image: url(../img/heart-tel@2x.png);
+      }
+
+      @include tablet {
+        top: -96px;
+
+        background-image: url(../img/heart-tablet.png);
+
+        @include retina {
+          background-image: url(../img/heart-tablet@2x.png);
+        }
+      }
+
+      @include comp {
+        background-image: url(../img/heart-comp.png);
+
+        @include retina {
+          background-image: url(../img/heart-comp@2x.png);
+        }
+      }
+    }
+  }
+
+  &__text {
+    @include font(12px, 700, 20px, 0em);
+
+    width: 230px;
+    height: 36px;
+
+    color: $second-text-color;
+
+    margin: 0;
+
+    @include tablet {
+      @include font(14px, 700, 24px, 0em);
+
+      width: 166px;
+      height: 67px;
+    }
+
+    @include comp {
+      @include font(16px, 700, 28px, 0.02em);
+
+      width: 288px;
+      height: 52px;
+    }
+  }
+}

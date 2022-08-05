@@ -1,9 +1,14 @@
 .hidden {
   @extend %vissually-hidden;
 }
-// .contacts {
-//   text-align: center;
-// }
+.contacts {
+  background-image: linear-gradient(
+    to bottom,
+    $header-color 22%,
+    #fff5f6 15%,
+    #fff5f6 100%
+  );
+}
 .contacts__wrap {
   display: flex;
   flex-wrap: wrap;
@@ -29,11 +34,12 @@
   @include font(12px, 500, 22px, 0.04em);
   display: inline-block;
   text-transform: uppercase;
-  border: 1px solid transparent;
+
   border-radius: 4px;
-  color: $main-text-color;
-  background-color: $background-card-one;
-  padding: 4px 25px;
+  color: $header-color;
+  background-color: $background-card-two;
+
+  padding: 0 25px;
 
   @include tablet {
     @include font(16px, 500, 30px, 0.04em);
@@ -137,18 +143,18 @@
   justify-content: center;
   margin-top: 32px;
   gap: 10px;
+
+  @include tablet {
+    gap: 12px;
+  }
 }
 .button {
   position: relative;
   border-radius: 22px;
-  padding-top: 16px;
-  padding-bottom: 16px;
-  padding-left: 17px;
-  padding-right: 55px;
-  // padding: 17px 16px;
-  margin-left: 14px;
-  min-width: 73px;
-  border: 1px solid red;
+  padding: 10px 30px 10px 16px;
+
+  min-width: 162px;
+  border: 1px solid transparent;
 
   @include font(16px, 700, 21px, 0.04em);
   cursor: pointer;
@@ -165,6 +171,10 @@
 .button:hover .button__icon {
   fill: $header-color;
 }
+.button.current {
+  background-color: $accent-color;
+  color: $header-color;
+}
 .button__icon {
   width: 6px;
   height: 10px;
@@ -173,6 +183,6 @@
 }
 .more {
   position: absolute;
-  transform: translateY(8%);
+  transform: translate(120%, 8%);
   @include font(16px, 700, 21px, 0.04em);
 }
