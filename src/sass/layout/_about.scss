@@ -1,52 +1,225 @@
 .about {
   max-width: 480px;
-  height: 100%;
 
   text-align: center;
 
   margin: 0 auto;
 
+  background-image: url(../img/milk-bg-tel.png);
+  background-repeat: no-repeat;
+  background-position-y: 591px;
+  background-size: 100%;
+
   background-color: $background-about;
 
-  &__container {
-    padding-top: 60px;
+  @include mob {
+    max-width: 767px;
   }
 
-  //   &__div--title {
-  //     display: block;
-  //     bottom: 0;
-  //     width: 200px;
-  //     height: 112px;
-  //     margin-top: 60px;
-  //   }
+  @include tablet {
+    max-width: 1199px;
+
+    background-image: none;
+  }
+
+  @include comp {
+    background-image: url(../img/milk-bg-comp.png);
+    background-repeat: no-repeat;
+    background-position-y: 236px;
+    background-size: 100%;
+
+    max-width: 100%;
+  }
+
+  &__container {
+    position: relative;
+
+    padding-top: 57px;
+
+    @include tablet {
+      padding-top: 60px;
+    }
+  }
+
+  &__div--title {
+    margin-bottom: 32px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 112px;
+
+    @include tablet {
+      margin-bottom: 0;
+      width: 431px;
+      height: 101px;
+    }
+
+    @include comp {
+      width: 537px;
+      height: 116px;
+    }
+  }
+
+  &__div--tablet {
+    @include tablet {
+      display: flex;
+      gap: 32px;
+    }
+
+    @include comp {
+      gap: 99px;
+    }
+  }
 
   &__label {
+    @include font(18px, 400, 21px, 0);
+
     margin: 0;
 
     font-family: 'Titan One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 1.17px;
     text-align: center;
     text-transform: uppercase;
 
     color: #ffa5ba;
+
+    @include tablet {
+      @include font(26px, none, 30px, none);
+    }
+
+    @include comp {
+      @include font(30px, none, 34px, 00.04em);
+    }
   }
 
   &__title {
+    @include font(34px, 400, 39px, 00.04em);
+
     display: block;
     margin: 0;
+    margin-top: 15px;
 
     font-family: 'Titan One';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 34px;
-    line-height: 1.15;
     text-align: center;
-    letter-spacing: 0.04em;
     text-transform: uppercase;
 
     color: #d41443;
+
+    @include tablet {
+      @include font(48px, none, 55px, 0.04em);
+
+      margin-top: 16px;
+    }
+
+    @include comp {
+      @include font(58px, none, 66px, 0.06em);
+    }
+  }
+
+  &__picture {
+    @include tablet {
+      width: 336px;
+      height: 335px;
+
+      margin-top: 40px;
+    }
+
+    @include comp {
+      width: 501px;
+      height: 501px;
+
+      margin-top: 60px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__text--fat {
+    @include font(12px, 500, 19px, 0em);
+
+    margin: 40px 0;
+
+    width: 220px;
+    height: 79px;
+    z-index: 2;
+
+    margin-right: auto;
+
+    text-align: left;
+
+    color: $second-text-color;
+
+    @include tablet {
+      @include font(14px, 500, 25px, 0em);
+
+      width: 334px;
+      height: 79px;
+    }
+
+    @include comp {
+      @include font(16px, 500, 28px, 0.04em);
+
+      margin-top: 150px;
+      margin-bottom: 32px;
+
+      width: 463px;
+      height: 79px;
+    }
+  }
+
+  &__text {
+    @include font(12px, 500, 19px, 0em);
+
+    margin: 0;
+    margin-bottom: 20px;
+    width: 220px;
+    height: 181px;
+
+    text-align: left;
+
+    color: $main-text-color;
+
+    @include tablet {
+      @include font(14px, 500, 25px, 0em);
+
+      width: 334px;
+      height: 155px;
+
+      margin-bottom: 40px;
+    }
+
+    @include comp {
+      @include font(14px, 500, 27px, 0.04em);
+
+      width: 463px;
+      height: 155px;
+    }
+  }
+
+  &__button {
+    @include font(14px, 700, 18px, 0em);
+
+    width: 176px;
+    height: 44px;
+
+    padding-right: 19px;
+
+    border: none;
+    border-radius: 22px;
+
+    color: $accent-color;
+    background-color: $header-color;
+
+    @include tablet {
+      //   margin-right: 192px;
+      display: block;
+      text-align: left;
+
+      padding-left: 37px;
+    }
+  }
+
+  &__icon {
+    margin-left: 14px;
+
+    background-color: $accent-color;
   }
 }

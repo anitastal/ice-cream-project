@@ -1,37 +1,50 @@
 <section class="about">
   <div class="conteiner about__container">
-    <label class="about__label" for="title">tradition and love</label>
-    <h2 class="about__title" id="title">how it’s made?</h2>
+    <div class="about__div--title">
+      <label class="about__label" for="title">tradition and love</label>
+      <h2 class="about__title" id="title">how it’s made?</h2>
+    </div>
 
-    <picture>
-      <source
-        srcset="./img/cow-comp.png 1x, ./img/cow-comp@2x.png 2x"
-        media="(min-width: 1200px)"
-      />
-      <source
-        srcset="./img/cow-tablet.png 1x, ./img/cow-tablet@2x.png 2x"
-        media="(min-width: 768px)"
-      />
-      <source
-        srcset="./img/cow-tel.png 1x, ./img/cow-tel@2x.png 2x"
-        media="(min-width: 320px)"
-      />
-      <img src="./img/cow-comp.png" alt="cow and milk" width="501" />
-    </picture>
+    <div class="about__div--tablet">
+      <picture class="about__picture">
+        <source
+          srcset="./img/cow-comp.png 1x, ./img/cow-comp@2x.png 2x"
+          media="(min-width: 1200px)"
+        />
+        <source
+          srcset="./img/cow-tablet.png 1x, ./img/cow-tablet@2x.png 2x"
+          media="(min-width: 768px)"
+        />
+        <source
+          srcset="./img/cow-tel.png 1x, ./img/cow-tel@2x.png 2x"
+          media="(min-width: 320px)"
+        />
+        <img src="./img/cow-comp.png" alt="cow and milk" width="501" />
+      </picture>
 
-    <p class="about__text--fat">
-      Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
-      cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at justo
-      fringilla.
-    </p>
-    <p class="about__text">
-      Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum.
-      Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl
-      suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
-      tincidunt. Aliquam erat volutpat. Aenean accumsan.
-    </p>
-    <button type="button" class="about__button">
-      <a href="" class="about__link">Read more</a>
-    </button>
+      <div>
+        <p class="about__text--fat">
+          Fusce ut velit laoreet, tempus arcu eu, molestie tortor. Nam vel justo
+          cursus, faucibus lorem eget, egestas eros. Maecenas eleifend erat at
+          justo fringilla.
+        </p>
+
+        <p class="about__text">
+          Curabitur lacinia enim at ex blandit, vel pellentesque odio elementum.
+          Mauris rhoncus orci in imperdiet placerat. Vestibulum euismod nisl
+          suscipit ligula volutpat, a feugiat urna maximus. Cras massa nibh,
+          tincidunt.<br />
+          <br />
+          Aliquam erat volutpat. Aenean accumsan.
+        </p>
+
+        <button type="button" class="about__button">
+          Read more
+          <svg class="about__icon" width="4px" height="8px">
+            <use href="./img/icons.svg#skobki"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
   </div>
 </section>
