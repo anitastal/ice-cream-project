@@ -14,6 +14,8 @@
 
     @include comp {
         display: block;
+        position: relative;
+        z-index: 8;
     }
 }
 
