@@ -14,6 +14,13 @@
         height: 334px;
     }
 
+    @include comp {
+        padding-top: 65px;
+        padding-bottom: 84px;
+
+        height: 577px;
+    }
+
 }
 
 .hero__title {
