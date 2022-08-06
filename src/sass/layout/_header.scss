@@ -56,6 +56,10 @@
         display: none;
     }
 
+    @include tablet {
+        margin-left: 326px;
+    }
+
     @include comp {
         display: none;
     }
