@@ -23,11 +23,23 @@
   letter-spacing: 0.04em;
   text-transform: uppercase;
 
+  margin-bottom: 148px;
+
+  @include tablet {
+    font-size: 48px;
+    line-height: 1.14;
+  }
+
+  @include comp {
+    font-size: 58px;
+    line-height: 1.13;
+    letter-spacing: 0.06em;
+    margin-bottom: 281px;
+  }
+
   color: $accent-color;
 
   text-align: center;
-
-  margin-bottom: 148px;
 
   > label {
     font-weight: 400;
@@ -38,6 +50,17 @@
     color: $background-circle;
 
     margin-bottom: 15px;
+
+    @include tablet {
+      font-size: 26px;
+      line-height: 1.15;
+    }
+
+    @include comp {
+      font-size: 30px;
+      line-height: 1.13;
+      letter-spacing: 0.04em;
+    }
   }
 }
 
@@ -58,6 +81,8 @@
   margin-bottom: 140px;
   height: 489px;
   border-radius: 24px;
+  padding-top: 160px;
+  padding-bottom: 40px;
 
   @include tablet {
     width: 224px;
@@ -163,9 +188,9 @@
       }
       @include comp {
         background-image: url(../img/milk-shake-comp.png);
-        @include retina {
-          background-image: url(../img/milk-shake-comp@2x.png);
-        }
+        // @include retina {
+        //   background-image: url(../img/milk-shake-comp@2x.png);
+        // }
       }
     }
   }
@@ -175,18 +200,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   text-align: center;
-  padding-top: 160px;
-  padding-bottom: 40px;
+  margin: 0;
 
   @include tablet {
-    padding-top: 118px;
   }
 
   @include comp {
-    padding-top: 165px;
-    padding-bottom: 60px;
+    margin-top: 12px;
+    margin-bottom: 60px;
   }
 }
 
@@ -194,8 +216,7 @@
   font-family: 'Titan One';
   font-weight: 400;
   font-size: 20px;
-  line-height: 23px;
-  /* identical to box height */
+  line-height: 1.15;
 
   text-align: center;
   letter-spacing: 0.04em;
@@ -205,9 +226,24 @@
 
   margin-bottom: 32px;
 
-  // &::after {
-  //   background-image: url(../../img/);
-  // }
+  &::after {
+    content: '';
+    background-image: url(../img/drops.png);
+    width: 26px;
+    height: 6px;
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-top: 32px;
+  }
+
+  @include comp {
+    font-size: 30px;
+    line-height: 1.13;
+  }
 }
 
 .product__text {
@@ -223,19 +259,14 @@
   margin-bottom: 32px;
 
   @include tablet {
-    width: 160px;
-    height: 150px;
     line-height: 1.76;
     margin-bottom: 32px;
   }
 
   @include comp {
-    width: 245px;
-    height: 106px;
     margin-bottom: 60px;
-
     font-size: 16px;
-    line-height: 1.76;
+    width: 241px;
   }
 }
 
@@ -244,4 +275,20 @@
   height: 40px;
   border-radius: 50%;
   border: none;
+  background-color: transparent;
+  background-color: $header-color;
+  border-radius: 50%;
+  border: none;
+  text-align: center;
+
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product__icon {
+  width: 13px;
+  height: 15px;
+  fill: $accent-color;
 }
