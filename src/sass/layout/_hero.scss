@@ -209,6 +209,7 @@
     text-align: right;
 
     &::after {
+        z-index: -2;
         content:'';
         position: absolute;
         top: 0;
