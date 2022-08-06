@@ -227,6 +227,7 @@
   &::after {
     content: '';
     background-image: url(../img/drops.png);
+    background-repeat: no-repeat;
     width: 26px;
     height: 6px;
     color: black;
