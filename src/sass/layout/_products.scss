@@ -4,7 +4,15 @@
   padding-left: 20px;
   padding-right: 20px;
 
-  @include mob;
+  @include tablet {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include comp {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 }
 
 .product__caption {
@@ -54,6 +62,7 @@
   @include tablet {
     width: 224px;
     height: 473px;
+    margin-bottom: 0;
   }
 
   @include comp {
@@ -78,6 +87,7 @@
     @include tablet {
       width: 224px;
       height: 224px;
+      transform: translateY(-60%);
     }
 
     @include comp {
@@ -153,9 +163,9 @@
       }
       @include comp {
         background-image: url(../img/milk-shake-comp.png);
-        // @include retina {
-        //   background-image: url(../img/milk-shake-comp@2x.png);
-        // }
+        @include retina {
+          background-image: url(../img/milk-shake-comp@2x.png);
+        }
       }
     }
   }
@@ -169,6 +179,15 @@
   text-align: center;
   padding-top: 160px;
   padding-bottom: 40px;
+
+  @include tablet {
+    padding-top: 118px;
+  }
+
+  @include comp {
+    padding-top: 165px;
+    padding-bottom: 60px;
+  }
 }
 
 .product__article {
@@ -184,7 +203,11 @@
 
   color: $header-color;
 
-  margin-bottom: 70px;
+  margin-bottom: 32px;
+
+  // &::after {
+  //   background-image: url(../../img/);
+  // }
 }
 
 .product__text {
@@ -201,6 +224,9 @@
 
   @include tablet {
     width: 160px;
+    height: 150px;
+    line-height: 1.76;
+    margin-bottom: 32px;
   }
 
   @include comp {
