@@ -1,0 +1,292 @@
+.product.container {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+
+  @include tablet {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  @include comp {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}
+
+.product__caption {
+  font-family: 'Titan One';
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 1.11;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  margin-bottom: 148px;
+
+  @include tablet {
+    font-size: 48px;
+    line-height: 1.14;
+  }
+
+  @include comp {
+    font-size: 58px;
+    line-height: 1.13;
+    letter-spacing: 0.06em;
+    margin-bottom: 281px;
+  }
+
+  color: $accent-color;
+
+  text-align: center;
+
+  > label {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 1.16;
+    text-align: center;
+    text-transform: uppercase;
+    color: $background-circle;
+
+    margin-bottom: 15px;
+
+    @include tablet {
+      font-size: 26px;
+      line-height: 1.15;
+    }
+
+    @include comp {
+      font-size: 30px;
+      line-height: 1.13;
+      letter-spacing: 0.04em;
+    }
+  }
+}
+
+.product__catalog {
+  @include tablet {
+    gap: 16px;
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  @include comp {
+    gap: 32px;
+  }
+}
+
+.product__item {
+  position: relative;
+  margin-bottom: 140px;
+  height: 489px;
+  border-radius: 24px;
+  padding-top: 160px;
+  padding-bottom: 40px;
+
+  @include tablet {
+    width: 224px;
+    height: 473px;
+    margin-bottom: 0;
+  }
+
+  @include comp {
+    width: 368px;
+    height: 535px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transform: translateY(-50%);
+
+    @include tablet {
+      width: 224px;
+      height: 224px;
+      transform: translateY(-60%);
+    }
+
+    @include comp {
+      width: 368px;
+      height: 394px;
+    }
+  }
+
+  &:first-child {
+    background-color: $background-color;
+    &::before {
+      content: '';
+      background-image: url(../img/ice-cream-tel.png);
+      // @include retina {
+      //   background-image: url(../img/ice-cream-tel@2x.png);
+      // }
+
+      @include tablet {
+        background-image: url(../img/ice-cream-tablet.png);
+
+        // @include retina {
+        //   background-image: url(../img/ice-cream-tablet@2x.png);
+        // }
+      }
+      @include comp {
+        background-image: url(../img/ice-cream-comp.png);
+        // @include retina {
+        //   background-image: url(../img/ice-cream-comp@2x.png);
+        // }
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    background-color: $background-card-two;
+    &::before {
+      content: '';
+      background-image: url(../img/ice-coffee-tel.png);
+      // @include retina {
+      //   background-image: url(../img/ice-coffee-tel@2x.png);
+      // }
+      @include tablet {
+        background-image: url(../img/ice-coffee-tablet.png);
+
+        // @include retina {
+        //   background-image: url(../img/ice-coffee-tablet@2x.png);
+        // }
+      }
+      @include comp {
+        background-image: url(../img/ice-coffee-comp.png);
+        // @include retina {
+        //   background-image: url(../img/ice-coffee-comp@2x.png);
+        // }
+      }
+    }
+  }
+
+  &:last-child {
+    background-color: $background-card-three;
+    margin-bottom: 0;
+    &::before {
+      content: '';
+      background-image: url(../img/milk-shake-tel.png);
+      // @include retina {
+      //   background-image: url(../img/milk-shake-tel@2x.png);
+      // }
+      @include tablet {
+        background-image: url(../img/milk-shake-tablet.png);
+
+        // @include retina {
+        //   background-image: url(../img/milk-shake-tablet@2x.png);
+        // }
+      }
+      @include comp {
+        background-image: url(../img/milk-shake-comp.png);
+        // @include retina {
+        //   background-image: url(../img/milk-shake-comp@2x.png);
+        // }
+      }
+    }
+  }
+}
+
+.product__blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin: 0;
+
+  @include tablet {
+  }
+
+  @include comp {
+    margin-top: 12px;
+    margin-bottom: 60px;
+  }
+}
+
+.product__article {
+  font-family: 'Titan One';
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1.15;
+
+  text-align: center;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+
+  color: $header-color;
+
+  &::after {
+    content: '';
+    background-image: url(../img/drops.png);
+    width: 26px;
+    height: 6px;
+    color: black;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 32px auto;
+  }
+
+  @include comp {
+    font-size: 30px;
+    line-height: 1.13;
+  }
+}
+
+.product__text {
+  width: 200px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.52;
+  letter-spacing: 0.04em;
+
+  color: $header-color;
+
+  margin-bottom: 32px;
+
+  @include tablet {
+    line-height: 1.76;
+    margin-bottom: 32px;
+  }
+
+  @include comp {
+    margin-bottom: 60px;
+    font-size: 16px;
+    width: 241px;
+  }
+}
+
+.product__button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background-color: transparent;
+  background-color: $header-color;
+  border-radius: 50%;
+  border: none;
+  text-align: center;
+
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.product__icon {
+  width: 13px;
+  height: 15px;
+  fill: $accent-color;
+}

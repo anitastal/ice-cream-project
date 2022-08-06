@@ -63,12 +63,12 @@
             </li>
         </ul>
         <div class="button__wrap">
-            <button class="button current" type="button">Our Locations <span class="more"> > </span>
+            <button class="contacts__button current" type="button">Our Locations <span class="more"> > </span>
                 <!-- <svg class="button__icon">
                 <use href="./img/icons.svg#Vector-1-1"></use>
             </svg> -->
             </button>
-            <button class="button" type="button">Franchise <span class="more"> > </span>
+            <button class="contacts__button" type="button" data-menu-open>Franchise <span class="more"> > </span>
                 <!-- <svg class="button__icon">
                     <use href="./img/icons.svg#Vector-1-1"></use>
                 </svg> -->
@@ -77,3 +77,66 @@
         </div>
     </div>
 </section>
+
+
+<!-- -----МОДАЛЬНОЕ ОКНО-------- -->
+<div class="contacts__backdrop is-hidden" data-menu>
+    <div class="contacts__modal">
+        <button class=" modal__close" type="button" data-menu-close>
+            <svg class="modal__img">
+                <use href="./img/icons.svg#cross"></use>
+            </svg>
+        </button>
+
+        <!-- форма заполнения -->
+        <form class="modal__form js-callback-form">
+            <h1 class="modal__title">Оставьте свои данные, мы вам перезвоним</h1>
+
+            <label for="name">
+                <span class="form__label">Имя</span>
+                <div class="field">
+                    <svg class="field__icon">
+                        <use href="./img/icons.svg#person"></use>
+                    </svg>
+                    <input class="field__input" type="text" name="name" id="name" />
+                </div>
+            </label>
+
+            <label for="tel">
+                <span class="form__label">Телефон</span>
+                <div class="field">
+                    <svg class="field__icon">
+                        <use href="./img/icons.svg#phone"></use>
+                    </svg>
+                    <input class="field__input" type="tel" name="tel" id="tel" />
+                </div>
+            </label>
+
+            <label for="emeil">
+                <span class="form__label">Почта</span>
+                <div class="field">
+                    <svg class="field__icon">
+                        <use href="./img/icons.svg#email"></use>
+                    </svg>
+                    <input class="field__input" type="emeil" name="emeil" id="emeil" />
+                </div>
+            </label>
+
+            <label for="comment">
+                <span class="form__label">Коментарий</span>
+                <textarea class="form__comment" name="comment" id="comment" rows="10"
+                    placeholder="Введите текст"></textarea>
+            </label>
+
+            <label class="form__deal" for="deal">
+                <input class="checkbox" type="checkbox" name="deal" value="deal" id="deal">
+                <span class="checkbox__icon"></span>
+                Соглашаюсь с рассылкой и принимаю
+                <a class="form__link" href="#"> Условия договора </a>
+            </label>
+
+            <button class="modal__button" type="submit">Отправить</button>
+
+        </form>
+    </div>
+</div>
