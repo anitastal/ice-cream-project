@@ -1,41 +1,47 @@
 .reviews{
-    padding: 30px 0;
-}
-.reviews__title{
-    @extend %vissually-hidden;
-}
-.reviews__block{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     
+    &__title {
+            @extend %vissually-hidden;
+        }
+    &__block {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;  
+
+    }
+    &__img {
+        width: 85px;
+        height: auto;
+        margin-bottom: 32px;
+    }
+    .container{
+        padding-top: 30px;
+        padding-bottom: 43px;
+        width: 100%;
+    }
 }
-.reviews__img{
-    width: 85px;
-    height: auto;
-    margin-bottom: 32px;
-}
-.reviews_bg{
-    padding: 30px 50px 17px 50px;
+
+.reviews__bg{
+    padding: 43px 50px 17px 50px;
     margin-bottom: 16px;
     background-color: #FAFAFA;
     @media screen and(min-width:768px) {
         background-color: rgba(250, 250, 250, 0.4);
-        padding: 20px 6px 36px 6px;
+        padding: 37px 6px 36px 6px;
+        margin-bottom: 0;
     }
 
     @media screen and(min-width:1200px) {
-        padding: 32px 73px;
+        margin-bottom: 16px;
+        padding: 47px 73px 39px;
         background-color: #FAFAFA;
     }}
 
 .reviews__text{
     position: relative;
     width: 170px;
-    padding: 0 8px 9px 15px;
-    @include font($fs: 12px, $fw: 500, $lh: 31px, $ls: 0.0em); 
-    text-align: center;
+    padding: 1px 8px 9px 15px;  
     background-image:
             repeating-linear-gradient(180deg,
                 #FAFAFA,
@@ -45,33 +51,58 @@
                 #FAFAFA 31px);
     @media screen and(min-width:768px) {
             width: 608px;
-            padding: 0 44px 8px 49px;
+            padding: 1px 44px 8px 49px;
             margin-right: 0;
-            @include font($fs: 14px, $fw: 500, $lh: 30px, $ls: 0.04em);
         }
     
     @media screen and(min-width:1200px) {
             width: 822px;
-            padding: 0 36px 8px 36px;
+            padding: 1px 36px 8px 36px;
+        }
+    &::before {
+        position: absolute;
+        top: -13px;
+        left: -2px;
+        content: "";
+        display: inline-block;
+        background-image: url('../img/skobki-tablet.svg');
+        width: 54px;
+        height: 40px;
+        fill: #E1E1E1;
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+    
+        @media screen and(min-width:768px) {
+            top: -17px;
+            left: 4px;
+            width: 60px;
+            height: 40px;
+        }
+    
+        @media screen and(min-width:1200px) {
+            width: 54px;
+            height: 40px;
+            left: 1px;
+            top: -15px;
+        }}
+    &--up {
+        position: relative;
+        text-align: center;
+        @include font($fs: 12px, $fw: 500, $lh: 31px, $ls: 0.0em);
+        z-index: 1;
+    
+        @media screen and(min-width:768px) {
+            @include font($fs: 14px, $fw: 500, $lh: 30px, $ls: 0.04em);
+        }
+    
+        @media screen and(min-width:1200px) {
             @include font($fs: 16px, $fw: 500, $lh: 30px, $ls: 0.04em);
         }
-}
-.reviews__text::before{
-    position: absolute;
-    top: 0;
-    left: 0;
-    content: "";
-    display: inline-block;
-    background-image: url('../img/icons.svg#skobki');
-    fill: #E1E1E1;
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
     
-    width: 54px;
-    height: 40px;
-    outline: 1px solid olive;
+    }
 }
+
 .reviews__name{
     position: relative;
     padding-top: 20px;
@@ -84,20 +115,39 @@
     @media screen and(min-width:1200px) {
         @include font($fs: 20px, $fw: 500, $lh: 37px, $ls: 0.0em);
         }
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        display: block;
+        content: "";
+        background-image: url("../img/drops-red.svg");
+        fill: $accent-color;
+        background-size: contain;
+        width: 32px;
+        height: 4px;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
 }
-.reviews__name::before{
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    display: block;
-    content: "";
-    background-image: url(../img/icons.svg#more-new);
-    fill: $accent-color;
-    background-size: contain;
-    width: 32px;
-    height: 4px;
+
+.swiper-pagination-clickable .swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+}
+
+.swiper-pagination-bullet-active {
+    background-image: url(../img/house.png);
+    width: 12px;
+    height: 12px;
+    border-radius: 0%;
+    background-size: cover;
     background-repeat: no-repeat;
+    background-color: transparent;
     background-position: center;
-    outline: 1px solid tomato;
+}
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+    margin: 0 var(--swiper-pagination-bullet-horizontal-gap, 8px);
 }
