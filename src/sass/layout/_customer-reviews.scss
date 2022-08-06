@@ -31,10 +31,18 @@
     }}
 
 .reviews__text{
+    position: relative;
     width: 170px;
     padding: 0 8px 9px 15px;
     @include font($fs: 12px, $fw: 500, $lh: 31px, $ls: 0.0em); 
     text-align: center;
+    background-image:
+            repeating-linear-gradient(180deg,
+                #FAFAFA,
+                #FAFAFA 30px,
+                #E1E1E1 30px,
+                #E1E1E1 31px,
+                #FAFAFA 31px);
     @media screen and(min-width:768px) {
             width: 608px;
             padding: 0 44px 8px 49px;
@@ -49,16 +57,22 @@
         }
 }
 .reviews__text::before{
+    position: absolute;
+    top: 0;
+    left: 0;
     content: "";
     display: inline-block;
     background-image: url('../img/icons.svg#skobki');
-    background-size: cover;
+    fill: #E1E1E1;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
     width: 54px;
     height: 40px;
     outline: 1px solid olive;
-    background-position: top left;
 }
 .reviews__name{
+    position: relative;
     padding-top: 20px;
     text-align: center;
     @include font($fs: 14px, $fw: 500, $lh: 26px, $ls: 0.0em);
@@ -69,4 +83,20 @@
     @media screen and(min-width:1200px) {
         @include font($fs: 20px, $fw: 500, $lh: 37px, $ls: 0.0em);
         }
+}
+.reviews__name::before{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+    content: "";
+    background-image: url(../img/icons.svg#more-new);
+    fill: $accent-color;
+    background-size: contain;
+    width: 32px;
+    height: 4px;
+    background-repeat: no-repeat;
+    background-position: center;
+    outline: 1px solid tomato;
 }
