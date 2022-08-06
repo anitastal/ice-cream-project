@@ -224,8 +224,6 @@
 
   color: $header-color;
 
-  margin-bottom: 32px;
-
   &::after {
     content: '';
     background-image: url(../img/drops.png);
@@ -237,7 +235,7 @@
     justify-content: center;
     align-items: center;
 
-    margin-top: 32px;
+    margin: 32px auto;
   }
 
   @include comp {
