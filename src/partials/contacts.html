@@ -1,11 +1,13 @@
-<section class="container contacts">
-    <div>
+<section class="contacts" id="contacts">
+    <div class="container">
         <h2 class="hidden">card</h2>
-        <ul class="contacts__wrap">
+        <ul class="card">
             <li class="contacts__card">
                 <p class="card__category">CAFE</p>
                 <h3 class="card__title">Chicago</h3>
+
                 <p class="card__text">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
+
                 <div class="timetable__wrap">
                     <ul class="timetable">
                         <li class="timetable__day">Monday - Friday</li>
@@ -16,8 +18,10 @@
                         <li class="timetable__time">08:00 AM - 16:00 PM</li>
                     </ul>
                 </div>
-                <a class="contacts__tel" href="tel:+610383766284">+61(0) 383 766 284</a>
-                <a class="contacts__mail" href="mailto:noreply@envato.com">noreply@envato.com</a>
+                <div class="contacts__wrap">
+                    <a class="contacts__tel" href="tel:+610383766284">+61(0) 383 766 284</a>
+                    <a class="contacts__mail" href="mailto:noreply@envato.com">noreply@envato.com</a>
+                </div>
             </li>
             <li class="contacts__card">
                 <p class="card__category second">FOODTRUCK</p>
@@ -33,11 +37,13 @@
                         <li class="timetable__time">08:00 AM - 16:00 PM</li>
                     </ul>
                 </div>
-                <a class="contacts__tel" href="tel:+610383766284">+61(0) 383 766 284</a>
-                <a class="contacts__mail" href="mailto:noreply@envato.com">noreply@envato.com</a>
+                <div class="contacts__wrap">
+                    <a class="contacts__tel" href="tel:+610383766284">+61(0) 383 766 284</a>
+                    <a class="contacts__mail" href="mailto:noreply@envato.com">noreply@envato.com</a>
+                </div>
             </li>
             <li class="contacts__card">
-                <p class="card__category second">Cafe</p>
+                <p class="card__category">Cafe</p>
                 <h3 class="card__title">New York</h3>
                 <p class="card__text">Fusce ut velit laoreet, tempus arcu molestie vulputate</p>
                 <div class="timetable__wrap">
@@ -50,9 +56,24 @@
                         <li class="timetable__time">08:00 AM - 16:00 PM</li>
                     </ul>
                 </div>
-                <a class="contacts__tel" href="tel:+610383766284">+61(0) 383 766 284</a>
-                <a class="contacts__mail" href="mailto:noreply@envato.com">noreply@envato.com</a>
+                <div class="contacts__wrap">
+                    <a class="contacts__tel" href="tel:+610383766284">+61(0) 383 766 284</a>
+                    <a class="contacts__mail" href="mailto:noreply@envato.com">noreply@envato.com</a>
+                </div>
             </li>
         </ul>
+        <div class="button__wrap">
+            <button class="button current" type="button">Our Locations <span class="more"> > </span>
+                <!-- <svg class="button__icon">
+                <use href="./img/icons.svg#Vector-1-1"></use>
+            </svg> -->
+            </button>
+            <button class="button" type="button">Franchise <span class="more"> > </span>
+                <!-- <svg class="button__icon">
+                    <use href="./img/icons.svg#Vector-1-1"></use>
+                </svg> -->
+            </button>
+            </button>
+        </div>
     </div>
 </section>
