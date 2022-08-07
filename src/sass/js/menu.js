@@ -34,27 +34,13 @@
 // ======Модальное окно контактов
 (() => {
   const refs = {
-    openMenuBtn: document.querySelector('[data-menu-open]'),
-    closeMenuBtn: document.querySelector('[data-menu-close]'),
-    menu: document.querySelector('[data-menu]'),
+    openMenuBtn: document.querySelector('[data-contacts-menu-open]'),
+    closeMenuBtn: document.querySelector('[data-contacts-menu-close]'),
+    menu: document.querySelector('[data-contacts-menu]'),
   };
   refs.openMenuBtn.addEventListener('click', toggleMenu);
   refs.closeMenuBtn.addEventListener('click', toggleMenu);
   function toggleMenu() {
     refs.menu.classList.toggle('is-hidden');
-  }
-})();
-// ====модалка типа последняя
-(() => {
-  const refsMenu = {
-    openMenuBtn: document.querySelector('[data-menu-open]'),
-    closeMenuBtn: document.querySelector('[data-menu-close]'),
-    menu: document.querySelector('[data-menu]'),
-  };
-  refs.openMenuBtn.addEventListener('click', toggleMenu);
-  refs.closeMenuBtn.addEventListener('click', toggleMenu);
-  function toggleMenu() {
-    console.log(refsMenu);
-    refsMenu.menu.classList.toggle('is-hidden');
   }
 })();
