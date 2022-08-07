@@ -19,6 +19,15 @@
 
   &__container {
     padding-top: 106px;
+    padding-bottom: 60px;
+
+    @include tablet {
+      padding-bottom: 64px;
+    }
+
+    @include comp {
+      padding-bottom: 120px;
+    }
   }
 
   &__title {
@@ -36,11 +45,11 @@
 
     @include tablet {
       display: flex;
-      gap: 120px;
+      gap: 115px;
     }
 
     @include comp {
-      gap: 153px;
+      gap: 148px;
     }
   }
 
