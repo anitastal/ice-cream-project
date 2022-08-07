@@ -15,10 +15,10 @@
     }
 
     @include comp {
-        padding-top: 65px;
+        padding-top: 60px;
         padding-bottom: 84px;
 
-        height: 577px;
+        height: 603px;
     }
 
 }
@@ -41,6 +41,13 @@
         font-size: 22px;
         line-height: 1.13;
     }
+
+    @include comp {
+        margin-top: 0;
+
+        width: 277px;
+        font-size: 38px;
+    }
 }
 
 .hero__title--bolt {    
@@ -49,6 +56,10 @@
 
     @include tablet {
         font-size: 34px;
+    }
+
+    @include comp {
+        font-size: 58px;
     }
 }
 
@@ -65,6 +76,11 @@
     padding: 0;
     border: none;
     border-radius: 20px;
+
+    @include comp {
+        margin-top: 24px;
+        margin-right: 12px;
+    }
 }
 
 .hero__button--primary {
@@ -83,6 +99,13 @@
     &:hover,
     &:focus {
         background-color: #E17992;
+    }
+
+    @include comp {
+        font-size: 14px;
+        line-height: 1.28;
+
+        padding: 12px 26px;
     }
 }
 
@@ -104,6 +127,13 @@
     &:focus {
         background-color: #ECEBEB;
     }
+
+    @include comp {
+        font-size: 14px;
+        line-height: 1.28;
+
+        padding: 12px 26px;
+    }
 }
 
 .hero__circle {
@@ -124,6 +154,14 @@
         left: 216px;
         width: 335px;
         height: 333px;
+    }
+
+    @include comp {
+        top: -93px;
+        left: 468px;
+
+        width: 534px;
+        height: 534px;
     }
 }
 
@@ -149,6 +187,14 @@
         width: 143px;
         height: 336px;
     }
+
+    @include comp {
+        width: 236px;
+        height: 557px;
+
+        top: -23px;
+        left: 620px;
+    }
 }
 
 .hero__picture--two {
@@ -162,6 +208,13 @@
             
         width: 152px;
         height: 154px;
+    }
+
+    @include comp {
+        width: 213px;
+        height: 216px;
+
+        top: 271px;
     }
 
 }
@@ -180,6 +233,12 @@
         height: 150px;
     }
 
+    @include comp {
+        width: 304px;
+        height: 241px;
+
+        top: 303px;
+    }
 }
 
 .hero-element {
@@ -209,6 +268,7 @@
     text-align: right;
 
     &::after {
+        z-index: -2;
         content:'';
         position: absolute;
         top: 0;
@@ -220,6 +280,15 @@
         height: 16px;
         border-radius: 50%;
         background-color: #fff;
+
+        @include comp {
+            width: 30px;
+            height: 30px;
+        }
+    }
+
+    @include comp {
+        font-size: 14px;
     }
 }
 
@@ -232,6 +301,10 @@
     letter-spacing: 0.04em;
     text-transform: uppercase;
     color: $accent-color;
+
+    @include comp {
+        font-size: 46px;
+    }
 }
 
 .hero-element__link {
@@ -240,6 +313,10 @@
 
     &:last-child {
         margin-bottom: 0;
+    }
+
+    @include comp {
+        margin-right: 15px;
     }
 }
 
@@ -256,6 +333,15 @@
         font-size: 8px;
         line-height: 1.5;
         color: #fff;
+    }
+
+    @include comp {
+        margin-top: 108px;
+        margin-left: 212px;
+
+        width: 200px;
+
+        font-size: 14px;
     }
 }
 
@@ -279,6 +365,17 @@
         &:hover,
         &:focus {
             background-color: #ECEBEB;
+        }
+    }
+
+    @include comp {
+        padding: 10px;
+        margin-left: 212px;
+        margin-top: 20px;
+
+        & svg {
+            width: 10px;
+            height: 10px;
         }
     }
 
