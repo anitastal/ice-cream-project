@@ -6,7 +6,6 @@
     closeModalBtn: document.querySelector('[data-modal-close]'),
     modal: document.querySelector('[data-modal]'),
   };
-  console.log(refs);
 
   refs.openModalBtn.addEventListener('click', toggleModal);
   refs.closeModalBtn.addEventListener('click', toggleModal);
@@ -43,5 +42,19 @@
   refs.closeMenuBtn.addEventListener('click', toggleMenu);
   function toggleMenu() {
     refs.menu.classList.toggle('is-hidden');
+  }
+})();
+// ====модалка типа последняя
+(() => {
+  const refsMenu = {
+    openMenuBtn: document.querySelector('[data-menu-open]'),
+    closeMenuBtn: document.querySelector('[data-menu-close]'),
+    menu: document.querySelector('[data-menu]'),
+  };
+  refs.openMenuBtn.addEventListener('click', toggleMenu);
+  refs.closeMenuBtn.addEventListener('click', toggleMenu);
+  function toggleMenu() {
+    console.log(refsMenu);
+    refsMenu.menu.classList.toggle('is-hidden');
   }
 })();
