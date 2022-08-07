@@ -14,6 +14,8 @@
 
     @include comp {
         display: block;
+        position: relative;
+        z-index: 8;
     }
 }
 
@@ -52,6 +54,10 @@
 
     & .header-button__menu--cross {
         display: none;
+    }
+
+    @include tablet {
+        margin-left: 326px;
     }
 
     @include comp {
