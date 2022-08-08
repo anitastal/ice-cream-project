@@ -250,13 +250,12 @@
   }
 }
 
-.about__modal {
+.modal {
   position: absolute;
 
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  // width: 290px;
   max-width: 737px;
   min-height: 100px;
   padding: 40px;
@@ -266,7 +265,7 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  &--title {
+  &__title--cow {
     text-align: left;
   }
 }
