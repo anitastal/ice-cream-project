@@ -181,6 +181,15 @@
   &.current {
     background-color: $accent-color;
     color: $header-color;
+
+    &:hover,
+    &:focus {
+      color: $accent-color;
+      background-color: $header-color;
+    }
+    &:hover &__icon {
+      fill: $accent-color;
+    }
   }
   &__icon {
     width: 6px;

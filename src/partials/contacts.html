@@ -68,7 +68,8 @@
                 <use href="./img/icons.svg#Vector-1-1"></use>
             </svg> -->
             </button>
-            <button class="contacts__button" type="button" data-menu-open>Franchise <span class="more"> > </span>
+            <button class="contacts__button" type="button" data-contacts-menu-open>Franchise <span class="more"> >
+                </span>
                 <!-- <svg class="button__icon">
                     <use href="./img/icons.svg#Vector-1-1"></use>
                 </svg> -->
@@ -80,9 +81,9 @@
 
 
 <!-- -----МОДАЛЬНОЕ ОКНО-------- -->
-<div class="contacts__backdrop is-hidden" data-menu>
+<div class="contacts__backdrop is-hidden" data-contacts-menu>
     <div class="contacts__modal">
-        <button class=" modal__close" type="button" data-menu-close>
+        <button class=" modal__close" type="button" data-contacts-menu-close>
             <svg class="modal__img">
                 <use href="./img/icons.svg#cross"></use>
             </svg>
@@ -90,10 +91,10 @@
 
         <!-- форма заполнения -->
         <form class="modal__form js-callback-form">
-            <h1 class="modal__title">Оставьте свои данные, мы вам перезвоним</h1>
+            <h1 class="modal__title">Leave your details, <br> we will call you back</h1>
 
             <label for="name">
-                <span class="form__label">Имя</span>
+                <span class="form__label">Name</span>
                 <div class="field">
                     <svg class="field__icon">
                         <use href="./img/icons.svg#person"></use>
@@ -103,7 +104,7 @@
             </label>
 
             <label for="tel">
-                <span class="form__label">Телефон</span>
+                <span class="form__label">Telephone</span>
                 <div class="field">
                     <svg class="field__icon">
                         <use href="./img/icons.svg#phone"></use>
@@ -113,7 +114,7 @@
             </label>
 
             <label for="emeil">
-                <span class="form__label">Почта</span>
+                <span class="form__label">Mail</span>
                 <div class="field">
                     <svg class="field__icon">
                         <use href="./img/icons.svg#email"></use>
@@ -123,19 +124,19 @@
             </label>
 
             <label for="comment">
-                <span class="form__label">Коментарий</span>
+                <span class="form__label">Comments</span>
                 <textarea class="form__comment" name="comment" id="comment" rows="10"
-                    placeholder="Введите текст"></textarea>
+                    placeholder="Type your text"></textarea>
             </label>
 
             <label class="form__deal" for="deal">
                 <input class="checkbox" type="checkbox" name="deal" value="deal" id="deal">
                 <span class="checkbox__icon"></span>
-                Соглашаюсь с рассылкой и принимаю
-                <a class="form__link" href="#"> Условия договора </a>
+                I agree to the newsletter and accept the terms of the
+                <a class="form__link" href="#"> Contract </a>
             </label>
 
-            <button class="modal__button" type="submit">Отправить</button>
+            <button class="modal__button" type="submit">Send</button>
 
         </form>
     </div>
