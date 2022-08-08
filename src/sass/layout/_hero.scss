@@ -69,6 +69,13 @@
     z-index: 2;
 }
 
+.hero__item {
+    margin-top: 20px;
+    @include comp {
+        margin-top: 24px;
+    }
+}
+
 .hero__button {
     margin: 0;
     margin-top: 20px;
