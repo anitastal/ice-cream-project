@@ -102,6 +102,7 @@
     height: 280px;
     top: 0;
     left: 0;
+    z-index: 2;
 
     display: flex;
     align-items: center;
@@ -301,8 +302,7 @@
   height: 100%;
 
   opacity: 1;
-
-  background-color: $accent-color;
+  background-color: inherit;
 
   transform: translateX(0);
   transition-duration: 250ms;
@@ -310,14 +310,15 @@
 
   border-radius: 24px;
 
-  padding: 60px 24px;
+  padding: 170px 24px;
 }
 
 .over__text {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 194%;
   letter-spacing: 0.04em;
-  color: $background-color;
+  color: $header-color;
+  text-align: center;
 }
 
 .product__overlay.is-hidden {

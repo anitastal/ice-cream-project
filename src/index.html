@@ -105,6 +105,36 @@
     })();
   </script>
 
+  <script>
+    (() => {
+      const refs = {
+        openMenuBtn: document.querySelector('[data-coffee-menu-open]'),
+        closeMenuBtn: document.querySelector('[data-coffee-menu-close]'),
+        menu: document.querySelector('[data-coffee-menu]'),
+      };
+      refs.openMenuBtn.addEventListener('click', toggleMenu);
+      refs.closeMenuBtn.addEventListener('click', toggleMenu);
+      function toggleMenu() {
+        refs.menu.classList.toggle('is-hidden');
+      }
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const refs = {
+        openMenuBtn: document.querySelector('[data-ice-menu-open]'),
+        closeMenuBtn: document.querySelector('[data-ice-menu-close]'),
+        menu: document.querySelector('[data-ice-menu]'),
+      };
+      refs.openMenuBtn.addEventListener('click', toggleMenu);
+      refs.closeMenuBtn.addEventListener('click', toggleMenu);
+      function toggleMenu() {
+        refs.menu.classList.toggle('is-hidden');
+      }
+    })();
+  </script>
+
 
 </body>
 
