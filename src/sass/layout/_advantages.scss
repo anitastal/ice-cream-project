@@ -30,17 +30,17 @@
 
     display: flex;
     flex-wrap: wrap;
-    gap: 98px;
+    gap: 93px;
 
     margin: 0;
 
     @include tablet {
       display: flex;
-      gap: 120px;
+      gap: 115px;
     }
 
     @include comp {
-      gap: 153px;
+      gap: 148px;
     }
   }
 
@@ -76,9 +76,11 @@
       position: absolute;
       background-image: url(../img/vedro-tel.png);
       background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
       top: -72px;
       left: 0;
-      width: 50px;
+      width: 33px;
       height: 50px;
 
       @include retina {
@@ -87,6 +89,8 @@
 
       @include tablet {
         top: -96px;
+
+        width: 50px;
 
         background-image: url(../img/vedro-tablet.png);
 
@@ -109,6 +113,8 @@
       position: absolute;
       background-image: url(../img/vedroapple-tel.png);
       background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
       top: -72px;
       left: 0;
       width: 50px;
@@ -142,9 +148,11 @@
       position: absolute;
       background-image: url(../img/heart-tel.png);
       background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
       top: -72px;
       left: 0;
-      width: 50px;
+      width: 44px;
       height: 50px;
 
       @include retina {
