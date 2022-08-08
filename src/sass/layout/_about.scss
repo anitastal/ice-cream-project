@@ -250,7 +250,7 @@
   }
 }
 
-.modal {
+.about__modal {
   position: absolute;
 
   left: 50%;
@@ -266,10 +266,8 @@
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 
-  &__title {
+  &--title {
     text-align: left;
-
-    color: black;
   }
 }
 
