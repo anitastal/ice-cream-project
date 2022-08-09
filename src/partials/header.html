@@ -51,7 +51,7 @@
           <button
             type="button"
             class="header-nav__button"
-            data-contacts-menu-open-two
+            data-header-menu-open
           >
             Buy now
             <svg class="header-nav__svg" width="8px" height="10px">
@@ -86,7 +86,7 @@
           <button
             type="button"
             class="header-nav__button"
-            data-contacts-menu-open-two
+            data-header-menu-open
           >
             Buy now
             <svg class="header-nav__svg" width="8px" height="10px">
@@ -119,13 +119,113 @@
       <button
         type="button"
         class="header-nav__button header-nav__button--two"
-        data-contacts-menu-open-two
+        data-header-two-menu-open
       >
         Buy now
         <svg class="header-nav__svg" width="8px" height="10px">
           <use href="./img/icons.svg#more"></use>
         </svg>
       </button>
+    </div>
+  </div>
+
+  <!-- -----МОДАЛЬНОЕ ОКНО-------- -->
+  <div class="header__backdrop is-hidden" data-header-menu>
+    <div class="header__modal">
+      <button class="header__close" type="button" data-header-menu-close>
+        <svg class="header__img">
+          <use href="./img/icons.svg#cross"></use>
+        </svg>
+      </button>
+
+      <!-- форма заполнения -->
+      <form class="header__form js-callback-form">
+        <h1 class="header__title">
+          Leave your details, <br />
+          we will call you back
+        </h1>
+
+        <label for="name">
+          <span class="header__label">Name</span>
+          <div class="field">
+            <svg class="field__icon">
+              <use href="./img/icons.svg#person"></use>
+            </svg>
+            <input class="field__input" type="text" name="name" id="name" />
+          </div>
+        </label>
+
+        <label for="tel">
+          <span class="header__label">Telephone</span>
+          <div class="field">
+            <svg class="field__icon">
+              <use href="./img/icons.svg#phone"></use>
+            </svg>
+            <input class="field__input" type="tel" name="tel" id="tel" />
+          </div>
+        </label>
+
+        <label for="emeil">
+          <span class="header__label">Mail</span>
+          <div class="field">
+            <svg class="field__icon">
+              <use href="./img/icons.svg#email"></use>
+            </svg>
+            <input class="field__input" type="emeil" name="emeil" id="emeil" />
+          </div>
+        </label>
+        <button class="header__button" type="submit">Send</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- -----МОДАЛЬНОЕ ОКНО-------- -->
+  <div class="header__backdrop is-hidden" data-header-two-menu>
+    <div class="header__modal">
+      <button class="header__close" type="button" data-header-two-menu-close>
+        <svg class="header__img">
+          <use href="./img/icons.svg#cross"></use>
+        </svg>
+      </button>
+
+      <!-- форма заполнения -->
+      <form class="header__form js-callback-form">
+        <h1 class="header__title">
+          Leave your details, <br />
+          we will call you back
+        </h1>
+
+        <label for="name">
+          <span class="header__label">Name</span>
+          <div class="field">
+            <svg class="field__icon">
+              <use href="./img/icons.svg#person"></use>
+            </svg>
+            <input class="field__input" type="text" name="name" id="name" />
+          </div>
+        </label>
+
+        <label for="tel">
+          <span class="header__label">Telephone</span>
+          <div class="field">
+            <svg class="field__icon">
+              <use href="./img/icons.svg#phone"></use>
+            </svg>
+            <input class="field__input" type="tel" name="tel" id="tel" />
+          </div>
+        </label>
+
+        <label for="emeil">
+          <span class="header__label">Mail</span>
+          <div class="field">
+            <svg class="field__icon">
+              <use href="./img/icons.svg#email"></use>
+            </svg>
+            <input class="field__input" type="emeil" name="emeil" id="emeil" />
+          </div>
+        </label>
+        <button class="header__button" type="submit">Send</button>
+      </form>
     </div>
   </div>
 </header>
