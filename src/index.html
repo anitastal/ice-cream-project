@@ -53,6 +53,7 @@
       refs.closeModalBtn.addEventListener('click', toggleModal);
 
       function toggleModal() {
+        document.body.classList.toggle('overflow');
         refs.modal.classList.toggle('is-hidden');
       }
     })();
@@ -72,4 +73,104 @@
 
         mobileMenuRef.classList.toggle('is-open');
       });
+    })();
+  </script>
 
+  <script>
+    (() => {
+      const refs = {
+        openMenuBtn: document.querySelector('[data-contacts-menu-open]'),
+        closeMenuBtn: document.querySelector('[data-contacts-menu-close]'),
+        menu: document.querySelector('[data-contacts-menu]'),
+      };
+      refs.openMenuBtn.addEventListener('click', toggleMenu);
+      refs.closeMenuBtn.addEventListener('click', toggleMenu);
+      function toggleMenu() {
+        document.body.classList.toggle('overflow');
+        refs.menu.classList.toggle('is-hidden');
+      }
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const refs = {
+        openMenuBtn: document.querySelector('[data-product-menu-open]'),
+        closeMenuBtn: document.querySelector('[data-product-menu-close]'),
+        menu: document.querySelector('[data-product-menu]'),
+      };
+      refs.openMenuBtn.addEventListener('click', toggleMenu);
+      refs.closeMenuBtn.addEventListener('click', toggleMenu);
+      function toggleMenu() {
+        document.body.classList.toggle('overflow');
+        refs.menu.classList.toggle('is-hidden');
+      }
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const refs = {
+        openMenuBtn: document.querySelector('[data-coffee-menu-open]'),
+        closeMenuBtn: document.querySelector('[data-coffee-menu-close]'),
+        menu: document.querySelector('[data-coffee-menu]'),
+      };
+      refs.openMenuBtn.addEventListener('click', toggleMenu);
+      refs.closeMenuBtn.addEventListener('click', toggleMenu);
+      function toggleMenu() {
+        document.body.classList.toggle('overflow');
+        refs.menu.classList.toggle('is-hidden');
+      }
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const refs = {
+        openMenuBtn: document.querySelector('[data-ice-menu-open]'),
+        closeMenuBtn: document.querySelector('[data-ice-menu-close]'),
+        menu: document.querySelector('[data-ice-menu]'),
+      };
+      refs.openMenuBtn.addEventListener('click', toggleMenu);
+      refs.closeMenuBtn.addEventListener('click', toggleMenu);
+      function toggleMenu() {
+        document.body.classList.toggle('overflow');
+        refs.menu.classList.toggle('is-hidden');
+      }
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const refs = {
+        openMenuBtn: document.querySelector('[data-header-menu-open]'),
+        closeMenuBtn: document.querySelector('[data-header-menu-close]'),
+        menu: document.querySelector('[data-header-menu]'),
+      };
+      refs.openMenuBtn.addEventListener('click', toggleMenu);
+      refs.closeMenuBtn.addEventListener('click', toggleMenu);
+      function toggleMenu() {
+        document.body.classList.toggle('overflow');
+        refs.menu.classList.toggle('is-hidden');
+      }
+    })();
+  </script>
+
+  <script>
+    (() => {
+      const refs = {
+        openMenuBtn: document.querySelector('[data-header-two-menu-open]'),
+        closeMenuBtn: document.querySelector('[data-header-two-menu-close]'),
+        menu: document.querySelector('[data-header-two-menu]'),
+      };
+      refs.openMenuBtn.addEventListener('click', toggleMenu);
+      refs.closeMenuBtn.addEventListener('click', toggleMenu);
+      function toggleMenu() {
+        document.body.classList.toggle('overflow');
+        refs.menu.classList.toggle('is-hidden');
+      }
+    })();
+  </script>
+</body>
+
+</html>
