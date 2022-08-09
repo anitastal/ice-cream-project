@@ -57,25 +57,9 @@
   &__numbers {
     @include font(36px, 400, 41px, 0.04em);
 
-    position: relative;
-
-    height: 56px;
-
-    font-family: 'Titan One';
-    text-transform: uppercase;
-    color: $accent-color;
+    position: static;
 
     margin: 0;
-
-    @include tablet {
-      @include font(48px, 400, 55px, 0.04em);
-    }
-
-    @include comp {
-      @include font(58px, 400, 66px, 0.04em);
-
-      height: 65px;
-    }
 
     &--gear::before {
       display: block;
@@ -89,17 +73,11 @@
       width: 33px;
       height: 50px;
 
-      margin-bottom: 16px;
-
       @include retina {
         background-image: url(../img/vedro-tel@2x.png);
       }
 
       @include tablet {
-        width: 33px;
-
-        margin-bottom: 36px;
-
         background-image: url(../img/vedro-tablet.png);
 
         @include retina {
@@ -108,8 +86,6 @@
       }
 
       @include comp {
-        margin-bottom: 40px;
-
         background-image: url(../img/vedro-comp.png);
 
         @include retina {
@@ -127,8 +103,6 @@
       background-size: cover;
       background-position: center;
 
-      margin-bottom: 16px;
-
       width: 50px;
       height: 50px;
 
@@ -137,8 +111,6 @@
       }
 
       @include tablet {
-        margin-bottom: 36px;
-
         background-image: url(../img/vedroapple-tablet.png);
 
         @include retina {
@@ -147,8 +119,6 @@
       }
 
       @include comp {
-        margin-bottom: 40px;
-
         background-image: url(../img/vedroapple-comp.png);
 
         @include retina {
@@ -166,8 +136,6 @@
       background-size: cover;
       background-position: center;
 
-      margin-bottom: 16px;
-
       width: 44px;
       height: 50px;
 
@@ -176,8 +144,6 @@
       }
 
       @include tablet {
-        margin-bottom: 36px;
-
         background-image: url(../img/heart-tablet.png);
 
         @include retina {
@@ -186,8 +152,6 @@
       }
 
       @include comp {
-        margin-bottom: 40px;
-
         background-image: url(../img/heart-comp.png);
 
         @include retina {
@@ -206,7 +170,7 @@
     color: $second-text-color;
 
     margin: 0;
-    margin-top: 76px;
+    margin-top: 4px;
 
     @include tablet {
       @include font(14px, 700, 24px, 0em);
@@ -214,7 +178,7 @@
       width: 166px;
       height: 67px;
 
-      margin-top: 105px;
+      margin-top: 13px;
     }
 
     @include comp {
@@ -223,7 +187,37 @@
       width: 288px;
       height: 52px;
 
-      margin-top: 121px;
+      margin-top: 16px;
     }
+  }
+}
+
+.advantages__title--number {
+  @include font(36px, 400, 41px, 0.04em);
+
+  position: static;
+
+  margin-top: 16px;
+
+  height: 56px;
+
+  font-family: 'Titan One';
+  text-transform: uppercase;
+  color: $accent-color;
+
+  @include tablet {
+    @include font(48px, 400, 55px, 0.04em);
+
+    text-transform: lowercase;
+
+    margin-top: 36px;
+  }
+
+  @include comp {
+    @include font(58px, 400, 66px, 0.04em);
+
+    height: 65px;
+
+    margin-top: 40px;
   }
 }
