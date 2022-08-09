@@ -3,8 +3,7 @@
 
   text-align: center;
 
-  padding: 0 20px;
-  margin: 0 auto;
+  padding-top: 57px;
 
   background-image: url(../img/milk-bg-tel.png);
   background-repeat: no-repeat;
@@ -43,7 +42,6 @@
   &__container {
     position: relative;
 
-    padding-top: 57px;
     margin-left: auto;
     margin-right: auto;
 
@@ -84,8 +82,6 @@
     margin-left: auto;
     margin-right: auto;
 
-    width: 320px;
-
     @include tablet {
       display: flex;
       gap: 32px;
@@ -107,7 +103,7 @@
     text-align: center;
     text-transform: uppercase;
 
-    color: #ffa5ba;
+    color: $background-circle;
 
     @include tablet {
       @include font(26px, none, 30px, none);
@@ -129,7 +125,7 @@
     text-align: center;
     text-transform: uppercase;
 
-    color: #d41443;
+    color: $accent-color;
 
     @include tablet {
       @include font(48px, none, 55px, 0.04em);
@@ -224,23 +220,20 @@
   &__button {
     @include font(14px, 700, 18px, 0em);
 
+    display: block;
+
     width: 176px;
     height: 44px;
 
-    padding-right: 19px;
+    padding: 0;
 
     border: none;
     border-radius: 22px;
 
+    text-align: center;
+
     color: $accent-color;
     background-color: $header-color;
-
-    @include tablet {
-      display: block;
-      text-align: left;
-
-      padding-left: 37px;
-    }
   }
 
   &__icon {
@@ -299,7 +292,7 @@
   text-align: center;
   text-transform: uppercase;
 
-  color: #ffa5ba;
+  color: $background-circle;
 
   @include tablet {
     @include font(26px, none, 30px, none);
