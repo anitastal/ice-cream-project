@@ -3,13 +3,21 @@
 }
 
 .contacts {
-  padding-top: 60px;
+  padding-top: 27px;
+  padding-bottom: 20px;
   background-image: linear-gradient(
     to bottom,
     $header-color 22%,
     #fff5f6 15%,
     #fff5f6 100%
   );
+  @include tablet {
+    padding-top: 40px;
+  }
+  @include comp {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
 
   &__card {
     padding: 40px 32px;
