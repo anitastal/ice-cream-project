@@ -3,6 +3,7 @@
 
   text-align: center;
 
+  padding: 0 20px;
   margin: 0 auto;
 
   background-image: url(../img/milk-bg-tel.png);
@@ -43,9 +44,20 @@
     position: relative;
 
     padding-top: 57px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include mob {
+      width: 320px;
+    }
 
     @include tablet {
       padding-top: 60px;
+      width: 768px;
+    }
+
+    @include comp {
+      width: 1200px;
     }
   }
 
@@ -69,13 +81,20 @@
   }
 
   &__div--tablet {
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 320px;
+
     @include tablet {
       display: flex;
       gap: 32px;
+      width: 768px;
     }
 
     @include comp {
       gap: 99px;
+      width: 1200px;
     }
   }
 
@@ -252,21 +271,65 @@
 
 .modal {
   position: absolute;
+  overflow: hidden;
+
+  z-index: 2;
 
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   max-width: 737px;
-  min-height: 100px;
-  padding: 40px;
+  min-width: 300px;
+  min-height: auto;
+  padding: 40px 20px;
 
   background-color: $background-about;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+}
 
-  &__title--cow {
-    text-align: left;
+.about__modal-title {
+  @include font(18px, 400, 21px, 0);
+
+  margin: 0;
+  margin-bottom: 30px;
+
+  font-family: 'Titan One';
+  text-align: center;
+  text-transform: uppercase;
+
+  color: #ffa5ba;
+
+  @include tablet {
+    @include font(26px, none, 30px, none);
+  }
+
+  @include comp {
+    @include font(30px, none, 34px, 00.04em);
+  }
+}
+
+.about__modal-list {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 20px;
+}
+
+.about__modal-item {
+  @include font(12px, 500, 19px, 0em);
+
+  text-align: center;
+
+  color: $second-text-color;
+
+  @include tablet {
+    @include font(14px, 500, 25px, 0em);
+  }
+
+  @include comp {
+    @include font(14px, 500, 27px, 0.04em);
   }
 }
 
