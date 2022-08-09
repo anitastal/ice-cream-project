@@ -10,10 +10,12 @@
 
   @include tablet {
     max-width: 1199px;
+    padding-top: 146px;
   }
 
   @include comp {
     max-width: 100%;
+    padding-top: 130px;
   }
 
   &__container {
