@@ -54,12 +54,12 @@
           closeModalBtn: document.querySelector('[data-modal-close]'),
           modal: document.querySelector('[data-modal]'),
         };
-        console.log(refs);
 
         refs.openModalBtn.addEventListener('click', toggleModal);
         refs.closeModalBtn.addEventListener('click', toggleModal);
 
         function toggleModal() {
+          document.body.classList.toggle('overflow');
           refs.modal.classList.toggle('is-hidden');
         }
       })();
