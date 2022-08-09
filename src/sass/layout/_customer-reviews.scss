@@ -16,8 +16,6 @@
         margin-bottom: 32px;
     }
     .container{
-        padding-top: 0;
-        padding-bottom: 43px;
         width: 100%;
     }
 }
@@ -105,10 +103,13 @@
 
 .reviews__name{
     position: relative;
-    padding-top: 20px;
+    padding-top: 16px;
+    padding-bottom: 40px;
     text-align: center;
     @include font($fs: 14px, $fw: 500, $lh: 26px, $ls: 0.0em);
     @media screen and(min-width:768px) {
+            padding-top: 20px;
+            padding-bottom: 50px;
         @include font($fs: 16px, $fw: 500, $lh: 30px, $ls: 0.0em);
         }
     
