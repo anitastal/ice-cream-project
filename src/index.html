@@ -1,141 +1,175 @@
 <!DOCTYPE html>
 <html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page title</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./sass/index.scss" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
+      rel="stylesheet"
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page title</title>
-  <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="./sass/index.scss" />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Titan+One&display=swap"
-    rel="stylesheet">
+    <script type="module" src="./index.js"></script>
+  </head>
 
+  <body>
+    <!-- ❗️❗️❗️ Add partials like so for every page -->
+    <include src="./partials/header.html"></include>
+    <include src="./partials/hero.html"></include>
+    <include src="./partials/products.html"></include>
+    <include src="./partials/about.html"></include>
+    <include src="./partials/advantages.html"></include>
+    <include src="./partials/gallery.html"></include>
+    <include src="./partials/customer-reviews.html"></include>
+    <include src="./partials/contacts.html"></include>
+    <include src="./partials/footer.html"></include>
 
-  <script type="module" src="./index.js"></script>
-</head>
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
-<body>
-  <!-- ❗️❗️❗️ Add partials like so for every page -->
-  <include src="./partials/header.html"></include>
-  <include src="./partials/hero.html"></include>
-  <include src="./partials/products.html"></include>
-  <include src="./partials/about.html"></include>
-  <include src="./partials/advantages.html"></include>
-  <include src="./partials/gallery.html"></include>
-  <include src="./partials/customer-reviews.html"></include>
-  <include src="./partials/contacts.html"></include>
-  <include src="./partials/footer.html"></include>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-
-  <!-- Initialize Swiper -->
-  <script>
-    var swiper = new Swiper(".mySwiper", {
-      pagination: {
-        el: ".swiper-pagination",
-        clickable: true
-      },
-      loop: true,
-    });  
-  </script>
-
-  <script>
-    (() => {
-      const refs = {
-        openModalBtn: document.querySelector('[data-modal-open]'),
-        closeModalBtn: document.querySelector('[data-modal-close]'),
-        modal: document.querySelector('[data-modal]'),
-      };
-      console.log(refs);
-
-      refs.openModalBtn.addEventListener('click', toggleModal);
-      refs.closeModalBtn.addEventListener('click', toggleModal);
-
-      function toggleModal() {
-        refs.modal.classList.toggle('is-hidden');
-      }
-    })();
-  </script>
-
-  <script>
-    (() => {
-      const menuBtnRef = document.querySelector('[data-menu-button]');
-      const mobileMenuRef = document.querySelector('[data-menu]');
-
-      menuBtnRef.addEventListener('click', () => {
-        const expanded = menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
-
-        menuBtnRef.classList.toggle('is-open');
-        menuBtnRef.setAttribute('aria-expanded', !expanded);
-
-        mobileMenuRef.classList.toggle('is-open');
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper('.mySwiper', {
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        loop: true,
       });
-    })();
-  </script>
+    </script>
 
-  <script>
-    (() => {
-      const refs = {
-        openMenuBtn: document.querySelector('[data-contacts-menu-open]'),
-        closeMenuBtn: document.querySelector('[data-contacts-menu-close]'),
-        menu: document.querySelector('[data-contacts-menu]'),
-      };
-      refs.openMenuBtn.addEventListener('click', toggleMenu);
-      refs.closeMenuBtn.addEventListener('click', toggleMenu);
-      function toggleMenu() {
-        refs.menu.classList.toggle('is-hidden');
-      }
-    })();
-  </script>
+    <script>
+      (() => {
+        const refs = {
+          openModalBtn: document.querySelector('[data-modal-open]'),
+          closeModalBtn: document.querySelector('[data-modal-close]'),
+          modal: document.querySelector('[data-modal]'),
+        };
+        console.log(refs);
 
+        refs.openModalBtn.addEventListener('click', toggleModal);
+        refs.closeModalBtn.addEventListener('click', toggleModal);
 
-  <script>
-    (() => {
-      const refs = {
-        openMenuBtn: document.querySelector('[data-product-menu-open]'),
-        closeMenuBtn: document.querySelector('[data-product-menu-close]'),
-        menu: document.querySelector('[data-product-menu]'),
-      };
-      refs.openMenuBtn.addEventListener('click', toggleMenu);
-      refs.closeMenuBtn.addEventListener('click', toggleMenu);
-      function toggleMenu() {
-        refs.menu.classList.toggle('is-hidden');
-      }
-    })();
-  </script>
+        function toggleModal() {
+          refs.modal.classList.toggle('is-hidden');
+        }
+      })();
+    </script>
 
-  <script>
-    (() => {
-      const refs = {
-        openMenuBtn: document.querySelector('[data-coffee-menu-open]'),
-        closeMenuBtn: document.querySelector('[data-coffee-menu-close]'),
-        menu: document.querySelector('[data-coffee-menu]'),
-      };
-      refs.openMenuBtn.addEventListener('click', toggleMenu);
-      refs.closeMenuBtn.addEventListener('click', toggleMenu);
-      function toggleMenu() {
-        refs.menu.classList.toggle('is-hidden');
-      }
-    })();
-  </script>
+    <script>
+      (() => {
+        const menuBtnRef = document.querySelector('[data-menu-button]');
+        const mobileMenuRef = document.querySelector('[data-menu]');
 
-  <script>
-    (() => {
-      const refs = {
-        openMenuBtn: document.querySelector('[data-ice-menu-open]'),
-        closeMenuBtn: document.querySelector('[data-ice-menu-close]'),
-        menu: document.querySelector('[data-ice-menu]'),
-      };
-      refs.openMenuBtn.addEventListener('click', toggleMenu);
-      refs.closeMenuBtn.addEventListener('click', toggleMenu);
-      function toggleMenu() {
-        refs.menu.classList.toggle('is-hidden');
-      }
-    })();
-  </script>
+        menuBtnRef.addEventListener('click', () => {
+          const expanded =
+            menuBtnRef.getAttribute('aria-expanded') === 'true' || false;
 
+          menuBtnRef.classList.toggle('is-open');
+          menuBtnRef.setAttribute('aria-expanded', !expanded);
 
-</body>
+          mobileMenuRef.classList.toggle('is-open');
+        });
+      })();
+    </script>
 
+    <script>
+      (() => {
+        const refs = {
+          openMenuBtn: document.querySelector('[data-contacts-menu-open]'),
+          closeMenuBtn: document.querySelector('[data-contacts-menu-close]'),
+          menu: document.querySelector('[data-contacts-menu]'),
+        };
+        refs.openMenuBtn.addEventListener('click', toggleMenu);
+        refs.closeMenuBtn.addEventListener('click', toggleMenu);
+        function toggleMenu() {
+          refs.menu.classList.toggle('is-hidden');
+        }
+      })();
+    </script>
+
+    <script>
+      (() => {
+        const refs = {
+          openMenuBtn: document.querySelector('[data-product-menu-open]'),
+          closeMenuBtn: document.querySelector('[data-product-menu-close]'),
+          menu: document.querySelector('[data-product-menu]'),
+        };
+        refs.openMenuBtn.addEventListener('click', toggleMenu);
+        refs.closeMenuBtn.addEventListener('click', toggleMenu);
+        function toggleMenu() {
+          refs.menu.classList.toggle('is-hidden');
+        }
+      })();
+    </script>
+
+    <script>
+      (() => {
+        const refs = {
+          openMenuBtn: document.querySelector('[data-coffee-menu-open]'),
+          closeMenuBtn: document.querySelector('[data-coffee-menu-close]'),
+          menu: document.querySelector('[data-coffee-menu]'),
+        };
+        refs.openMenuBtn.addEventListener('click', toggleMenu);
+        refs.closeMenuBtn.addEventListener('click', toggleMenu);
+        function toggleMenu() {
+          refs.menu.classList.toggle('is-hidden');
+        }
+      })();
+    </script>
+
+    <script>
+      (() => {
+        const refs = {
+          openMenuBtn: document.querySelector('[data-ice-menu-open]'),
+          closeMenuBtn: document.querySelector('[data-ice-menu-close]'),
+          menu: document.querySelector('[data-ice-menu]'),
+        };
+        refs.openMenuBtn.addEventListener('click', toggleMenu);
+        refs.closeMenuBtn.addEventListener('click', toggleMenu);
+        function toggleMenu() {
+          refs.menu.classList.toggle('is-hidden');
+        }
+      })();
+    </script>
+
+    <script>
+      (() => {
+        const refs = {
+          openMenuBtn: document.querySelector('[data-header-menu-open]'),
+          closeMenuBtn: document.querySelector('[data-header-menu-close]'),
+          menu: document.querySelector('[data-header-menu]'),
+        };
+        refs.openMenuBtn.addEventListener('click', toggleMenu);
+        refs.closeMenuBtn.addEventListener('click', toggleMenu);
+        function toggleMenu() {
+          refs.menu.classList.toggle('is-hidden');
+        }
+      })();
+    </script>
+
+    <script>
+      (() => {
+        const refs = {
+          openMenuBtn: document.querySelector('[data-header-two-menu-open]'),
+          closeMenuBtn: document.querySelector('[data-header-two-menu-close]'),
+          menu: document.querySelector('[data-header-two-menu]'),
+        };
+        refs.openMenuBtn.addEventListener('click', toggleMenu);
+        refs.closeMenuBtn.addEventListener('click', toggleMenu);
+        function toggleMenu() {
+          refs.menu.classList.toggle('is-hidden');
+        }
+      })();
+    </script>
+  </body>
 </html>
