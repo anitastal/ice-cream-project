@@ -1,16 +1,24 @@
 footer {
   background-color: $background-about;
   padding-top: 40px;
-
-  @media screen and(min-width:768px) {
+  .container{
+    padding-bottom: 40px;
+    @media screen and(min-width:768px) {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  @media screen and(min-width:1200px) {
-    padding-top: 120px;
-    padding-bottom: 60px;
+    @media screen and(min-width:1200px) {
+      padding-bottom: 60px;
+    }
+
   }
+@media screen and(min-width:1200px) {
+    padding-top: 120px;
+   
+    flex-direction: column;
+  }
+  
 }
 .footer__title {
   display: inline-block;
@@ -54,6 +62,8 @@ footer {
   @media screen and(min-width:768px) {
     width: 286px;
   }
+    @media screen and(min-width: 1200px) {
+align-items: center;   }
 }
 .footer__soc {
   display: flex;
@@ -78,7 +88,6 @@ footer {
 }
 
 .footer__tel {
-  padding-bottom: 40px;
   @include font($fs: 12px, $fw: 700, $lh: 22px, $ls: 0em);
   width: 100%;
   text-align: right;
