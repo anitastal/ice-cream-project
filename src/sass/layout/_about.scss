@@ -22,11 +22,14 @@
 
   @include tablet {
     max-width: 1199px;
+    padding-top: 54px;
 
     background-image: none;
   }
 
   @include comp {
+    padding-top: 60px;
+
     background-image: url(../img/milk-bg-comp.png);
     background-repeat: no-repeat;
     background-position-y: 236px;
@@ -50,7 +53,6 @@
     }
 
     @include tablet {
-      padding-top: 60px;
       width: 768px;
     }
 
