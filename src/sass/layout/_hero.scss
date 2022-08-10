@@ -329,6 +329,8 @@
 
 .hero-text {
     display: none;
+    position: relative;
+    z-index: 12;
 
     @include tablet {
         display: block;
