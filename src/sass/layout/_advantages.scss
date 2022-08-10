@@ -1,6 +1,7 @@
 .advantages {
   max-width: 480px;
   padding-top: 40px;
+  padding-bottom: 30px;
 
   background-color: $background-about;
 
@@ -15,6 +16,7 @@
 
   @include comp {
     max-width: 100%;
+    padding-bottom: 60px;
   }
   // <<<<<<< HEAD
   //     padding-bottom: 60px;
